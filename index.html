@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe Builder — Park View Farm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <a href="https://parkviewfamilyfarm.com" class="farm-link" target="_blank" rel="noopener">
+            Park View Farm
+          </a>
+          <span class="brand-sep">|</span>
+          <span class="brand-tool">Recipe Builder</span>
+        </div>
+        <p class="header-tagline">Pick our products. Find what's local. Cook something real.</p>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="control-panel">
+
+        <section class="panel-section">
+          <h2 class="section-heading">Choose your products</h2>
+          <p class="section-sub">Select what you have or want to order from us.</p>
+
+          <div class="presets" id="presetButtons" aria-label="Quick selections"></div>
+
+          <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Product categories"></div>
+          <div class="product-panels" id="productPanels"></div>
+
+          <div class="selected-summary" id="selectedSummary" hidden>
+            <span id="selectedCount">0</span> product<span id="selectedPlural">s</span> selected
+            <button class="clear-btn" id="clearProducts" type="button">Clear</button>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <h2 class="section-heading">Preferences</h2>
+
+          <div class="field-group">
+            <label for="monthSelect">Month</label>
+            <select id="monthSelect">
+              <option value="0">January</option>
+              <option value="1">February</option>
+              <option value="2">March</option>
+              <option value="3">April</option>
+              <option value="4">May</option>
+              <option value="5">June</option>
+              <option value="6">July</option>
+              <option value="7">August</option>
+              <option value="8">September</option>
+              <option value="9">October</option>
+              <option value="10">November</option>
+              <option value="11">December</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="occasionSelect">Occasion</label>
+            <select id="occasionSelect">
+              <option value="any">Any occasion</option>
+              <option value="Quick weeknight">Quick weeknight</option>
+              <option value="Weekend dinner">Weekend dinner</option>
+              <option value="Sunday roast">Sunday roast</option>
+              <option value="Backyard cookout">Backyard cookout</option>
+              <option value="Brunch">Brunch</option>
+              <option value="Special occasion">Special occasion</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="cuisineSelect">Cuisine style</label>
+            <select id="cuisineSelect">
+              <option value="any">No preference</option>
+              <option value="American farmhouse">American farmhouse</option>
+              <option value="Italian">Italian</option>
+              <option value="Mexican">Mexican</option>
+              <option value="Asian-inspired">Asian-inspired</option>
+              <option value="Mediterranean">Mediterranean</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="servingsSelect">Servings</label>
+            <select id="servingsSelect">
+              <option value="2">2 people</option>
+              <option value="4" selected>4 people</option>
+              <option value="6">6 people</option>
+              <option value="8">8 people</option>
+            </select>
+          </div>
+        </section>
+
+        <button class="generate-btn" id="generateBtn" type="button" disabled>
+          Find Recipes
+        </button>
+
+      </aside>
+
+      <section class="results-panel">
+
+        <div class="season-header">
+          <div>
+            <p class="eyebrow" id="seasonEyebrow">In season now in Western NY</p>
+            <h2 id="seasonHeading">What's at the farmers market</h2>
+          </div>
+        </div>
+
+        <div class="season-strip" id="seasonStrip" aria-label="Seasonal produce available in Western NY"></div>
+        <p class="season-notes" id="seasonNotes"></p>
+
+        <div id="recipeArea">
+          <div class="empty-state" id="emptyState">
+            <div class="empty-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <circle cx="24" cy="24" r="23" stroke="#c8a97d" stroke-width="1.5" stroke-dasharray="4 3"/>
+                <path d="M16 28 C16 28 18 20 24 20 C30 20 32 28 32 28" stroke="#44745c" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                <circle cx="20" cy="25" r="2" fill="#c84b3f" opacity="0.7"/>
+                <circle cx="28" cy="23" r="1.5" fill="#d89b3d" opacity="0.7"/>
+                <circle cx="24" cy="27" r="2.5" fill="#44745c" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Ready when you are</h3>
+            <p>Select products from the left panel, then click <strong>Find Recipes</strong> to get ideas built around what you have and what's growing locally right now.</p>
+          </div>
+
+          <div class="loading-state" id="loadingState" hidden>
+            <div class="spinner" aria-hidden="true"></div>
+            <p class="loading-text">Building recipes around your selections and <span id="loadingMonth"></span> produce in Western NY&hellip;</p>
+          </div>
+
+          <div class="error-state" id="errorState" hidden>
+            <p class="error-message" id="errorMessage"></p>
+            <button class="retry-btn" id="retryBtn" type="button">Try again</button>
+          </div>
+
+          <div class="recipe-grid" id="recipeGrid" hidden aria-label="Generated recipes"></div>
+        </div>
+
+      </section>
+    </main>
+
+    <script src="products.js"></script>
+    <script src="seasonal.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
