@@ -1,0 +1,301 @@
+/* Park View Farm Recipes
+   Web layer of the PVF identity: Copse display + Hind body,
+   butcher paper / kraft / board black, PVF orange as the single accent.
+   Same conventions as the Order Planner. */
+
+:root {
+  /* When embedded on parkviewfamilyfarm.com these resolve to the GrazeCart
+     theme's own tokens (RGB triplets in theme-variables.css), so the tool
+     follows the site brand automatically. The fallbacks serve github.io. */
+  --paper: #F7F4EC;
+  --board: rgb(var(--text-color, 30 30 28));
+  --kraft: #C8A265;
+  --kraft-light: #E8DCC0;
+  --orange: rgb(var(--action-color, 240 138 36));
+  --asphalt: #6E6A63;
+  --white: #FFFFFF;
+  --pvf-green: #3D7A46;
+  --market-amber: #B07D2E;
+  --soldout: #A44A3F;
+}
+
+* { box-sizing: border-box; }
+
+/* Our own display rules must never beat the hidden attribute. */
+#pvf-recipes [hidden], main#recipes [hidden] { display: none !important; }
+
+/* Standalone page only — the embedded page keeps the site's background. */
+body:not(.pvf-embedded) {
+  margin: 0;
+  background: var(--paper);
+  color: var(--board);
+  font-family: 'Hind', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#pvf-recipes {
+  color: var(--board);
+  font-family: var(--body-font-family, 'Hind'), system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, .masthead__farm { font-family: 'Copse', Georgia, serif; font-weight: 400; }
+
+.masthead {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 8px;
+  text-align: center;
+}
+.masthead__farm {
+  color: var(--asphalt);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+}
+.masthead h1 { font-size: 2rem; margin: 10px 0 8px; }
+.masthead__sub { color: var(--asphalt); margin: 0 auto; max-width: 52ch; }
+
+main#recipes { max-width: 680px; margin: 0 auto; padding: 16px 16px 48px; }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--kraft-light);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 14px 0;
+}
+.hint { color: var(--asphalt); font-size: 0.9rem; margin: 4px 0 12px; }
+.linklike {
+  background: none; border: none; padding: 0;
+  color: var(--orange); text-decoration: underline;
+  font: inherit; cursor: pointer;
+}
+
+/* ── Mode tabs ─────────────────────────────────────── */
+
+.mode-tabs {
+  display: flex;
+  gap: 6px;
+  margin: 18px 0 0;
+  border: 1px solid var(--kraft-light);
+  border-radius: 10px;
+  padding: 5px;
+  background: var(--white);
+}
+.mode-tab {
+  flex: 1;
+  padding: 10px 6px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--asphalt);
+  font-family: 'Hind', system-ui, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.mode-tab[aria-selected="true"] {
+  background: var(--board);
+  color: var(--paper);
+}
+
+/* ── Filter chips ──────────────────────────────────── */
+
+.chip-row-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--asphalt);
+  margin: 10px 0 6px;
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  border: 1px solid var(--kraft);
+  background: var(--white);
+  color: var(--board);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: 'Hind', system-ui, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] {
+  background: var(--board);
+  border-color: var(--board);
+  color: var(--paper);
+}
+.chip .chip-count {
+  margin-left: 6px;
+  font-size: 0.78rem;
+  color: var(--asphalt);
+}
+.chip[aria-pressed="true"] .chip-count { color: var(--kraft-light); }
+.chip .chip-out {
+  margin-left: 6px;
+  font-size: 0.75rem;
+  color: var(--soldout);
+  font-weight: 600;
+}
+.chip[aria-pressed="true"] .chip-out { color: #E8B4AC; }
+
+.product-group { margin: 0 0 14px; }
+.selected-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  border-top: 1px dashed var(--kraft-light);
+  margin-top: 4px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: var(--asphalt);
+}
+
+/* ── Season panel ──────────────────────────────────── */
+
+.season-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 4px; }
+.season-head .chip-row-label { margin: 0; }
+#monthSelect {
+  font: inherit;
+  font-weight: 600;
+  padding: 4px 8px;
+  border: 1px solid var(--kraft);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--board);
+}
+.season-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--kraft-light);
+  background: var(--paper);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+.season-dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+/* ── Recipe list ───────────────────────────────────── */
+
+.count-line { color: var(--asphalt); font-size: 0.9rem; margin: 16px 4px 2px; }
+.empty-state { text-align: center; color: var(--asphalt); padding: 24px 12px; }
+.empty-state a { color: var(--orange); }
+
+.recipe-card { padding: 0; overflow: hidden; }
+.recipe-head {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  padding: 18px 20px 14px;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  display: block;
+}
+.recipe-head h3 { margin: 0 0 4px; font-size: 1.22rem; }
+.recipe-tagline { margin: 0 0 10px; color: var(--asphalt); font-size: 0.95rem; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 2px 8px;
+  background: var(--paper);
+  border: 1px solid var(--kraft-light);
+  color: var(--asphalt);
+}
+.badge-season { background: var(--pvf-green); border-color: var(--pvf-green); color: #fff; }
+.badge-soldout { background: #F6E7E4; border-color: #E4C4BE; color: var(--soldout); }
+
+.farm-line {
+  padding: 0 20px 14px;
+  font-size: 0.9rem;
+  color: var(--asphalt);
+}
+.farm-line strong { color: var(--board); font-weight: 600; }
+
+.recipe-body { border-top: 1px dashed var(--kraft-light); padding: 16px 20px 20px; }
+
+.ing-group-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--asphalt);
+  margin: 14px 0 6px;
+}
+.ing-group-label:first-child { margin-top: 0; }
+.source-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.source-dot-pvf { background: var(--pvf-green); }
+.source-dot-market { background: var(--market-amber); }
+.source-dot-pantry { background: var(--asphalt); }
+
+.ing-list { list-style: none; margin: 0; padding: 0; }
+.ing-list li {
+  display: flex;
+  gap: 10px;
+  padding: 3px 0;
+  font-size: 0.95rem;
+}
+.ing-amount { flex: none; min-width: 74px; color: var(--asphalt); font-size: 0.88rem; padding-top: 1px; }
+
+.recipe-steps { margin: 8px 0 0; padding-left: 22px; }
+.recipe-steps li { margin: 8px 0; }
+
+.info-box {
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  margin: 14px 0 0;
+}
+.info-box-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 4px;
+}
+.market-tip { background: #FBF3E3; border: 1px solid var(--kraft-light); }
+.market-tip .info-box-label { color: var(--market-amber); }
+.pvf-note { background: #EDF3EC; border: 1px solid #CFE0CC; }
+.pvf-note .info-box-label { color: var(--pvf-green); }
+
+/* ── Cart row ──────────────────────────────────────── */
+
+.cart-row {
+  border-top: 1px dashed var(--kraft-light);
+  padding: 14px 20px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.cart-btn {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: 'Hind', system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cart-btn:disabled { opacity: 0.6; cursor: default; }
+.cart-status { flex-basis: 100%; font-size: 0.88rem; color: var(--asphalt); margin: 0; }
+.cart-status a { color: var(--orange); }
+.order-links { font-size: 0.9rem; color: var(--asphalt); }
+.order-links a { color: var(--orange); margin-right: 10px; }
+
+@media (max-width: 480px) {
+  .mode-tab { font-size: 0.82rem; padding: 9px 4px; }
+  .ing-amount { min-width: 62px; }
+}

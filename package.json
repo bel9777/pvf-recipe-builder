@@ -1,18 +1,13 @@
 {
   "name": "pvf-recipe-builder",
-  "version": "1.0.0",
-  "description": "Park View Farm Recipe Builder — match farm products with Western NY seasonal produce",
-  "main": "server.js",
+  "version": "2.0.0",
+  "description": "Park View Farm Recipes — static recipe library matched to WNY seasons, with a Claude pipeline for growing it",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "serve": "py -m http.server 8644 --directory docs",
+    "generate": "node scripts/generate-recipes.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
-    "dotenv": "^16.4.0",
-    "express": "^4.19.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0"
+    "dotenv": "^16.4.0"
   }
 }

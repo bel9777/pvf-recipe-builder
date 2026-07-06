@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes — Park View Farm</title>
+  <meta name="description" content="Real recipes for pasture-raised, corn-and-soy-free chicken, pork, lamb, turkey, and eggs from Park View Farm in Leicester, NY — matched to what's in season in Western New York.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Copse&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="masthead">
+    <a class="masthead__farm" href="https://parkviewfamilyfarm.com">Park View Farm · Leicester, NY</a>
+    <h1>Recipes</h1>
+    <p class="masthead__sub">Real meals for pasture-raised, corn-and-soy-free chicken, pork, lamb, turkey, and eggs — matched to what's in season in Western New York.</p>
+  </header>
+
+  <main id="recipes">
+
+    <nav class="mode-tabs" role="tablist" aria-label="How do you want to find a recipe?">
+      <button class="mode-tab" role="tab" data-mode="browse" aria-selected="true">Browse recipes</button>
+      <button class="mode-tab" role="tab" data-mode="items" aria-selected="false">Start from your items</button>
+      <button class="mode-tab" role="tab" data-mode="season" aria-selected="false">What's in season</button>
+    </nav>
+
+    <section class="card controls" id="controls-browse" data-mode-panel="browse">
+      <div class="chip-row-label">Kind of meal</div>
+      <div class="chip-row" id="mealChips"></div>
+      <div class="chip-row-label">Cuisine</div>
+      <div class="chip-row" id="cuisineChips"></div>
+    </section>
+
+    <section class="card controls" id="controls-items" data-mode-panel="items" hidden>
+      <p class="hint">Pick what's in your freezer (or what you're ordering) and we'll show you what to cook with it.</p>
+      <div id="productGroups"><p class="hint">Loading the store catalog…</p></div>
+      <div class="selected-bar" id="selectedBar" hidden>
+        <span id="selectedText"></span>
+        <button type="button" class="linklike" id="clearItems">Clear</button>
+      </div>
+    </section>
+
+    <section class="card controls" id="controls-season" data-mode-panel="season" hidden>
+      <div class="season-head">
+        <label for="monthSelect" class="chip-row-label">At the market in</label>
+        <select id="monthSelect" aria-label="Month">
+          <option value="1">January</option><option value="2">February</option>
+          <option value="3">March</option><option value="4">April</option>
+          <option value="5">May</option><option value="6">June</option>
+          <option value="7">July</option><option value="8">August</option>
+          <option value="9">September</option><option value="10">October</option>
+          <option value="11">November</option><option value="12">December</option>
+        </select>
+      </div>
+      <div class="chip-row" id="seasonStrip"></div>
+      <p class="hint" id="seasonNotes"></p>
+    </section>
+
+    <p class="count-line" id="countLine"></p>
+
+    <div id="recipeList" aria-live="polite"></div>
+
+    <p class="empty-state" id="emptyState" hidden>
+      Nothing matches that combination yet — this library grows every month.
+      Try clearing a filter, or <a href="https://parkviewfamilyfarm.com/contact">tell us what you'd like to see</a>.
+    </p>
+
+  </main>
+
+  <script src="seasonal.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
