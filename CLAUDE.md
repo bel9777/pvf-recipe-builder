@@ -27,7 +27,9 @@ API cost, hosting need, and stale hardcoded catalog are why it was replaced.
   product names, URLs). If that fetch fails the app degrades gracefully.
 - `scripts/generate-recipes.js` grows the library with Claude (needs
   ANTHROPIC_API_KEY in .env). It validates slugs/schema before writing.
-  ALWAYS review generated recipes against the brand voice before committing.
+  ALWAYS grade generated recipes against `RECIPE-QUALITY-BAR.md` (repo root)
+  before committing — it defines reject/fix criteria and the whole-animal
+  batch balance rule.
 - One-click add-to-cart works only when embedded on parkviewfamilyfarm.com
   (same-origin GrazeCart Livewire mechanism, identical to the Order
   Planner's — see that repo's docs). On github.io it falls back to links.
