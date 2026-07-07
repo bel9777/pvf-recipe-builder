@@ -19,9 +19,18 @@ as a static app on the Order Planner's rails, deployed the same day.
   cart → verified at /cart → removed to leave the cart clean. Same
   Livewire mechanism as the Order Planner.
 
+## Coverage rule (Brian, 2026-07-06)
+
+Every cookable product in the store gets AT LEAST ONE recipe. As of
+2026-07-06 all 44 cookable products are covered (bundles, Farm Supporter
+Program, and the hog deposit are excluded by design). When the scraper
+picks up a NEW product, write or generate a recipe for it — the "Start
+from your items" picker shows a recipe count on every chip, and a chip
+with no count is a dead end we promised not to have.
+
 ## What shipped
 
-- 23-recipe hand-written seed library (docs/recipes.json), tagged by meal
+- 41-recipe hand-written library (23 seed + 18 added same day for full coverage) (docs/recipes.json), tagged by meal
   type / cuisine / months / live product slugs, brand voice throughout.
 - Three entry modes: Browse (meal × cuisine), Start from your items
   (live-catalog picker with per-product recipe counts), What's in season
