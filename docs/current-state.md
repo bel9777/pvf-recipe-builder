@@ -62,6 +62,26 @@ with no count is a dead end we promised not to have.
   does NOT change its slug. /recipes is owned by GrazeCart's built-in
   recipes feature and can't be claimed by a custom page.
 
+## Servings + package math (Brian's feedback, built 2026-07-07)
+
+Every pvf ingredient in recipes.json carries a structured quantity at the
+recipe's base servings: `lb` (by-weight cuts), `count` (eggs; dozen packs),
+or `packs: 1` + `fixed: true` (whole birds/roasts/stock bags). Package
+sizes come LIVE from the order planner scrape's `avg_weight_lb` — no
+hardcoded package table; if the store repacks, the app follows the scrape.
+Open cards get a servings stepper (2–16): culinary amounts scale (leading-
+number parser, nice fractions), and the "Your farm order for N" line
+recomputes packages + estimated dollars. Add-to-cart sends the computed
+package count per product (stacked Livewire calls, planner-verified
+mechanism). Print sheet uses the scaled amounts + farm-order line.
+
+STRETCH constants in app.js: another package is added only past a 15%
+overshoot (35% for fixed whole items — a bird carves thinner before you
+buy a second). NOT Brian-verified: per-pack contents assumptions baked
+into the recipe `lb` values (e.g. ham steaks per 2 lb pack, chops per
+pack, Canadian bacon slices per lb) — gut-check against real packages.
+generate-recipes.js now requires the quantity fields on new recipes.
+
 ## Weekly email recipe card (built 2026-07-06, STARTS with the 2026-07-14 send)
 
 `scripts/weekly-recipe-card.js` — no API key, no deps. Picks the most

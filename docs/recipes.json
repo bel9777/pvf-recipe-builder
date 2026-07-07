@@ -7,24 +7,73 @@
       "tagline": "One bird, one pan, and the kind of Sunday smell that pulls everyone into the kitchen.",
       "mealType": "sunday-dinner",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "1 hr 20 min",
       "totalTime": "1 hr 50 min",
       "totalMinutes": 110,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-whole-bird"],
+      "farmProducts": [
+        "chicken-whole-bird"
+      ],
       "ingredients": [
-        { "amount": "1 (4 lb)", "item": "whole chicken", "source": "pvf", "slug": "chicken-whole-bird" },
-        { "amount": "1 lb", "item": "carrots, cut in thick chunks", "source": "market" },
-        { "amount": "1 lb", "item": "parsnips or potatoes, cut in thick chunks", "source": "market" },
-        { "amount": "2", "item": "yellow onions, quartered", "source": "market" },
-        { "amount": "1 bunch", "item": "fresh thyme and rosemary", "source": "market" },
-        { "amount": "4 tbsp", "item": "butter, softened", "source": "pantry" },
-        { "amount": "1 head", "item": "garlic, halved crosswise", "source": "pantry" },
-        { "amount": "1", "item": "lemon, halved", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "1 (4 lb)",
+          "item": "whole chicken",
+          "source": "pvf",
+          "slug": "chicken-whole-bird",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "1 lb",
+          "item": "carrots, cut in thick chunks",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "parsnips or potatoes, cut in thick chunks",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "yellow onions, quartered",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "fresh thyme and rosemary",
+          "source": "market"
+        },
+        {
+          "amount": "4 tbsp",
+          "item": "butter, softened",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 head",
+          "item": "garlic, halved crosswise",
+          "source": "pantry"
+        },
+        {
+          "amount": "1",
+          "item": "lemon, halved",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Pull the chicken out of the fridge an hour before cooking and pat it very dry. Salt it generously inside and out.",
@@ -37,7 +86,11 @@
       ],
       "marketTip": "After the first frost, root vegetables get noticeably sweeter — October through winter carrots and parsnips are a different vegetable than the summer ones. Carrots sold with their tops still on are the freshest at the stand.",
       "pvfNote": "Our Cornish Cross birds live on fresh grass and a corn-and-soy-free ration from County Line Feeds. That's why the meat is darker and tastes like chicken used to — and why the drippings under those vegetables are worth fighting over.",
-      "tags": ["one-pan", "kid-friendly", "gluten-free"]
+      "tags": [
+        "one-pan",
+        "kid-friendly",
+        "gluten-free"
+      ]
     },
     {
       "id": "skillet-thighs-corn-tomatoes",
@@ -45,22 +98,58 @@
       "tagline": "Skin-side down until it crackles, then July sweet corn and burst tomatoes in the same pan.",
       "mealType": "weeknight",
       "cuisine": "farmhouse",
-      "months": [7, 8, 9],
+      "months": [
+        7,
+        8,
+        9
+      ],
       "prepTime": "10 min",
       "cookTime": "30 min",
       "totalTime": "40 min",
       "totalMinutes": 40,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-thighs"],
+      "farmProducts": [
+        "chicken-thighs"
+      ],
       "ingredients": [
-        { "amount": "2 lbs", "item": "chicken thighs, bone-in, skin-on", "source": "pvf", "slug": "chicken-thighs" },
-        { "amount": "3 ears", "item": "sweet corn, kernels cut off", "source": "market" },
-        { "amount": "1 pint", "item": "cherry tomatoes", "source": "market" },
-        { "amount": "1 bunch", "item": "basil", "source": "market" },
-        { "amount": "3 cloves", "item": "garlic, sliced", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "olive oil or lard", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, red pepper flakes", "source": "pantry" }
+        {
+          "amount": "2 lbs",
+          "item": "chicken thighs, bone-in, skin-on",
+          "source": "pvf",
+          "slug": "chicken-thighs",
+          "lb": 2
+        },
+        {
+          "amount": "3 ears",
+          "item": "sweet corn, kernels cut off",
+          "source": "market"
+        },
+        {
+          "amount": "1 pint",
+          "item": "cherry tomatoes",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "basil",
+          "source": "market"
+        },
+        {
+          "amount": "3 cloves",
+          "item": "garlic, sliced",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "olive oil or lard",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, red pepper flakes",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 425°F. Pat the thighs dry and season well with salt and pepper.",
@@ -72,7 +161,11 @@
       ],
       "marketTip": "WNY sweet corn arrives mid-July and it's legendary — buy it the day you cook it, and don't peel the husk back at the stand (it just dries the ear out for the next person). Heavy ears with sticky brown silk are the fresh ones.",
       "pvfNote": "Thighs from a bird that actually walked around have more muscle and more flavor, and the skin renders crisp instead of flabby. Pasture-raised and corn-and-soy-free is the whole reason this four-ingredient dinner works.",
-      "tags": ["one-pan", "kid-friendly", "gluten-free"]
+      "tags": [
+        "one-pan",
+        "kid-friendly",
+        "gluten-free"
+      ]
     },
     {
       "id": "grilled-spatchcock-chicken",
@@ -80,22 +173,61 @@
       "tagline": "The whole bird on the grill in under an hour, no flare-up drama — spatchcocked is the cheat code.",
       "mealType": "cookout",
       "cuisine": "farmhouse",
-      "months": [5, 6, 7, 8, 9],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "prepTime": "15 min",
       "cookTime": "50 min",
       "totalTime": "1 hr 5 min",
       "totalMinutes": 65,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["chicken-spatchcocked"],
+      "farmProducts": [
+        "chicken-spatchcocked"
+      ],
       "ingredients": [
-        { "amount": "1 (4 lb)", "item": "spatchcocked chicken", "source": "pvf", "slug": "chicken-spatchcocked" },
-        { "amount": "3", "item": "zucchini or summer squash, halved lengthwise", "source": "market" },
-        { "amount": "1 bunch", "item": "scallions or spring onions", "source": "market" },
-        { "amount": "1", "item": "lemon", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "olive oil", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "paprika, garlic powder, and black pepper, mixed", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "1 (4 lb)",
+          "item": "spatchcocked chicken",
+          "source": "pvf",
+          "slug": "chicken-spatchcocked",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "3",
+          "item": "zucchini or summer squash, halved lengthwise",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "scallions or spring onions",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "lemon",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "olive oil",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "paprika, garlic powder, and black pepper, mixed",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Salt the bird all over, ideally a few hours ahead. Rub it with the spice mix and a little oil.",
@@ -107,7 +239,11 @@
       ],
       "marketTip": "Zucchini and summer squash are everywhere from late June on — smaller squash (under 8 inches) are firmer and sweeter on the grill than the baseball bats.",
       "pvfNote": "We spatchcock these birds at the processor so you don't have to wrestle poultry shears on a Saturday. Same pasture-raised, corn-and-soy-free Cornish Cross as our whole birds, just flat — which means even cooking and all-crisp skin on a grill.",
-      "tags": ["grill", "gluten-free", "kid-friendly"]
+      "tags": [
+        "grill",
+        "gluten-free",
+        "kid-friendly"
+      ]
     },
     {
       "id": "cider-braised-leg-quarters",
@@ -115,24 +251,68 @@
       "tagline": "Fall in a Dutch oven — chicken braised in Finger Lakes cider until it's falling off the bone.",
       "mealType": "sunday-dinner",
       "cuisine": "farmhouse",
-      "months": [9, 10, 11],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "prepTime": "15 min",
       "cookTime": "1 hr",
       "totalTime": "1 hr 15 min",
       "totalMinutes": 75,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-leg-quarters"],
+      "farmProducts": [
+        "chicken-leg-quarters"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "chicken leg quarters", "source": "pvf", "slug": "chicken-leg-quarters" },
-        { "amount": "2 cups", "item": "fresh apple cider", "source": "market" },
-        { "amount": "2", "item": "firm apples, thickly sliced", "source": "market" },
-        { "amount": "2", "item": "yellow onions, sliced", "source": "market" },
-        { "amount": "2 sprigs", "item": "fresh thyme or sage", "source": "market" },
-        { "amount": "2 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "grainy mustard", "source": "pantry" },
-        { "amount": "1 splash", "item": "apple cider vinegar", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "chicken leg quarters",
+          "source": "pvf",
+          "slug": "chicken-leg-quarters",
+          "lb": 3
+        },
+        {
+          "amount": "2 cups",
+          "item": "fresh apple cider",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "firm apples, thickly sliced",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "yellow onions, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "2 sprigs",
+          "item": "fresh thyme or sage",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "grainy mustard",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 splash",
+          "item": "apple cider vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 350°F. Season the leg quarters well with salt and pepper.",
@@ -144,7 +324,11 @@
       ],
       "marketTip": "Real pressed cider shows up at WNY farm stands in September and it makes this dish — the pasteurized jug kind works, but fresh cider has an acidity that balances the richness. Grab extra apples that hold their shape: Crispin, Northern Spy, or Empire.",
       "pvfNote": "Leg quarters are the most underpriced cut on a pastured bird — all dark meat, built for braising, from chickens raised on grass and a corn-and-soy-free ration. This is the cut I tell people to start with.",
-      "tags": ["one-pot", "kid-friendly", "gluten-free"]
+      "tags": [
+        "one-pot",
+        "kid-friendly",
+        "gluten-free"
+      ]
     },
     {
       "id": "farmhouse-chicken-noodle-soup",
@@ -152,24 +336,75 @@
       "tagline": "Real stock from real bones, drumstick meat, and egg noodles — the soup that fixes February.",
       "mealType": "soup-stew",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "2 hr 30 min",
       "totalTime": "2 hr 45 min",
       "totalMinutes": 165,
       "servings": 6,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-stock-bag", "chicken-drumsticks"],
+      "farmProducts": [
+        "chicken-stock-bag",
+        "chicken-drumsticks"
+      ],
       "ingredients": [
-        { "amount": "1 bag", "item": "chicken stock bag (backs, necks, and bones)", "source": "pvf", "slug": "chicken-stock-bag" },
-        { "amount": "1.5 lbs", "item": "chicken drumsticks", "source": "pvf", "slug": "chicken-drumsticks" },
-        { "amount": "4", "item": "carrots, sliced", "source": "market" },
-        { "amount": "3 stalks", "item": "celery, sliced (or celeriac, diced)", "source": "market" },
-        { "amount": "1", "item": "large onion, diced", "source": "market" },
-        { "amount": "1 handful", "item": "fresh parsley or dill", "source": "market" },
-        { "amount": "8 oz", "item": "egg noodles", "source": "pantry" },
-        { "amount": "2", "item": "bay leaves", "source": "pantry" },
-        { "amount": "", "item": "salt and whole black peppercorns", "source": "pantry" }
+        {
+          "amount": "1 bag",
+          "item": "chicken stock bag (backs, necks, and bones)",
+          "source": "pvf",
+          "slug": "chicken-stock-bag",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "1.5 lbs",
+          "item": "chicken drumsticks",
+          "source": "pvf",
+          "slug": "chicken-drumsticks",
+          "lb": 1.5
+        },
+        {
+          "amount": "4",
+          "item": "carrots, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "3 stalks",
+          "item": "celery, sliced (or celeriac, diced)",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "large onion, diced",
+          "source": "market"
+        },
+        {
+          "amount": "1 handful",
+          "item": "fresh parsley or dill",
+          "source": "market"
+        },
+        {
+          "amount": "8 oz",
+          "item": "egg noodles",
+          "source": "pantry"
+        },
+        {
+          "amount": "2",
+          "item": "bay leaves",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and whole black peppercorns",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Put the stock bag contents and the drumsticks in your biggest pot with the bay leaves, a teaspoon of peppercorns, and half the onion. Cover with cold water by two inches.",
@@ -181,7 +416,11 @@
       ],
       "marketTip": "Winter farmers markets in Rochester carry storage carrots, onions, and celeriac all season — frost-sweetened storage carrots make noticeably sweeter soup than supermarket ones.",
       "pvfNote": "Stock from pasture-raised, corn-and-soy-free bones gels solid in the fridge — that's the collagen the label promises and rarely delivers. One stock bag plus a pack of drumsticks makes a week of soup for less than takeout for two.",
-      "tags": ["one-pot", "kid-friendly", "make-ahead"]
+      "tags": [
+        "one-pot",
+        "kid-friendly",
+        "make-ahead"
+      ]
     },
     {
       "id": "chicken-milanese-spring-greens",
@@ -189,25 +428,76 @@
       "tagline": "Crackly golden cutlets under a pile of lemony greens — spring dinner in twenty-five minutes.",
       "mealType": "weeknight",
       "cuisine": "italian",
-      "months": [4, 5, 6],
+      "months": [
+        4,
+        5,
+        6
+      ],
       "prepTime": "15 min",
       "cookTime": "10 min",
       "totalTime": "25 min",
       "totalMinutes": 25,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["chicken-breast-boneless", "chicken-eggs"],
+      "farmProducts": [
+        "chicken-breast-boneless",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "1.5 lbs", "item": "boneless chicken breast", "source": "pvf", "slug": "chicken-breast-boneless" },
-        { "amount": "2", "item": "eggs, beaten", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "4 cups", "item": "arugula or spring lettuce mix", "source": "market" },
-        { "amount": "4", "item": "radishes, sliced thin", "source": "market" },
-        { "amount": "1 cup", "item": "breadcrumbs (panko or homemade)", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "flour", "source": "pantry" },
-        { "amount": "1/3 cup", "item": "grated parmesan", "source": "pantry" },
-        { "amount": "1", "item": "lemon", "source": "pantry" },
-        { "amount": "1/4 cup", "item": "olive oil, lard, or tallow, for frying", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "1.5 lbs",
+          "item": "boneless chicken breast",
+          "source": "pvf",
+          "slug": "chicken-breast-boneless",
+          "lb": 1.5
+        },
+        {
+          "amount": "2",
+          "item": "eggs, beaten",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 2
+        },
+        {
+          "amount": "4 cups",
+          "item": "arugula or spring lettuce mix",
+          "source": "market"
+        },
+        {
+          "amount": "4",
+          "item": "radishes, sliced thin",
+          "source": "market"
+        },
+        {
+          "amount": "1 cup",
+          "item": "breadcrumbs (panko or homemade)",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "flour",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/3 cup",
+          "item": "grated parmesan",
+          "source": "pantry"
+        },
+        {
+          "amount": "1",
+          "item": "lemon",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/4 cup",
+          "item": "olive oil, lard, or tallow, for frying",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Slice each breast horizontally into two thin cutlets, then pound between parchment to an even quarter inch. Season with salt and pepper.",
@@ -219,7 +509,10 @@
       ],
       "marketTip": "May and June are peak lettuce season in the Genesee Valley — spicy arugula and French breakfast radishes both show up at the Brighton Farmers Market and they're exactly what this dish wants.",
       "pvfNote": "Breast from a pasture-raised, corn-and-soy-free bird actually stays juicy pounded thin — it hasn't been water-plumped. And the egg wash is our eggs doing what deep-orange yolks do: making the crust brown faster and richer.",
-      "tags": ["kid-friendly", "quick"]
+      "tags": [
+        "kid-friendly",
+        "quick"
+      ]
     },
     {
       "id": "sticky-honey-garlic-wings",
@@ -227,24 +520,70 @@
       "tagline": "Grill-crisped wings in a glaze that has everyone licking their fingers and counting who took more.",
       "mealType": "cookout",
       "cuisine": "asian",
-      "months": [5, 6, 7, 8, 9],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "prepTime": "10 min",
       "cookTime": "40 min",
       "totalTime": "50 min",
       "totalMinutes": 50,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-wings"],
+      "farmProducts": [
+        "chicken-wings"
+      ],
       "ingredients": [
-        { "amount": "2.5 lbs", "item": "chicken wings", "source": "pvf", "slug": "chicken-wings" },
-        { "amount": "1 bunch", "item": "scallions, sliced", "source": "market" },
-        { "amount": "1/3 cup", "item": "honey (local if you can get it)", "source": "market" },
-        { "amount": "3 tbsp", "item": "soy sauce or tamari", "source": "pantry" },
-        { "amount": "4 cloves", "item": "garlic, grated", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "grated fresh ginger", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "rice vinegar or cider vinegar", "source": "pantry" },
-        { "amount": "1 tsp", "item": "baking powder (for oven method)", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "2.5 lbs",
+          "item": "chicken wings",
+          "source": "pvf",
+          "slug": "chicken-wings",
+          "lb": 2.5
+        },
+        {
+          "amount": "1 bunch",
+          "item": "scallions, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1/3 cup",
+          "item": "honey (local if you can get it)",
+          "source": "market"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "soy sauce or tamari",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 cloves",
+          "item": "garlic, grated",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "grated fresh ginger",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "rice vinegar or cider vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tsp",
+          "item": "baking powder (for oven method)",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Pat the wings very dry and salt them. On the grill: cook over medium indirect heat, lid closed, turning every 10 minutes, about 35 minutes total. In the oven: toss with baking powder and roast at 425°F on a rack for 40 minutes, flipping once.",
@@ -255,7 +594,11 @@
       ],
       "marketTip": "Local honey vendors are at nearly every WNY market all season — a wildflower honey with some character beats clover here. Grab scallions in the same trip.",
       "pvfNote": "Wings from birds that ranged on pasture have real meat on them — these aren't the sad flat-and-drumette splits from the grocery cooler. Corn-and-soy-free feed means the fat renders clean and crisps instead of smoking up the grill.",
-      "tags": ["grill", "kid-friendly", "party"]
+      "tags": [
+        "grill",
+        "kid-friendly",
+        "party"
+      ]
     },
     {
       "id": "pork-chops-maple-apples",
@@ -263,23 +606,63 @@
       "tagline": "Thick chops, brown butter, September apples, and a slick of WNY maple — fall on a plate.",
       "mealType": "weeknight",
       "cuisine": "farmhouse",
-      "months": [9, 10, 11],
+      "months": [
+        9,
+        10,
+        11
+      ],
       "prepTime": "10 min",
       "cookTime": "20 min",
       "totalTime": "30 min",
       "totalMinutes": 30,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-chops"],
+      "farmProducts": [
+        "pork-chops"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "bone-in pork chops, about 1 inch thick", "source": "pvf", "slug": "pork-chops" },
-        { "amount": "2", "item": "firm apples, sliced", "source": "market" },
-        { "amount": "2 tbsp", "item": "maple syrup", "source": "market" },
-        { "amount": "1", "item": "shallot or small onion, minced", "source": "market" },
-        { "amount": "3 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "apple cider or stock", "source": "pantry" },
-        { "amount": "1 tsp", "item": "grainy mustard", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "bone-in pork chops, about 1 inch thick",
+          "source": "pvf",
+          "slug": "pork-chops",
+          "lb": 2.4
+        },
+        {
+          "amount": "2",
+          "item": "firm apples, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "maple syrup",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "shallot or small onion, minced",
+          "source": "market"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "apple cider or stock",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tsp",
+          "item": "grainy mustard",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Salt the chops 30 minutes ahead if you can. Pat dry and season with pepper.",
@@ -291,7 +674,11 @@
       ],
       "marketTip": "WNY maple producers sell at markets year-round — darker grades have more flavor and stand up to pork better than the light stuff. Apple-wise, pick something that holds its shape: Empire, Crispin, or Northern Spy.",
       "pvfNote": "Idaho Pasture Pigs put on real intramuscular fat living outside on pasture with a corn-and-soy-free ration. That's why these chops stay juicy at a true medium — don't cook the pink out of them.",
-      "tags": ["quick", "gluten-free", "kid-friendly"]
+      "tags": [
+        "quick",
+        "gluten-free",
+        "kid-friendly"
+      ]
     },
     {
       "id": "smoked-chops-braised-cabbage",
@@ -299,24 +686,71 @@
       "tagline": "The chops are already smoked — you're twenty minutes from a supper that tastes like it took all day.",
       "mealType": "weeknight",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "25 min",
       "totalTime": "35 min",
       "totalMinutes": 35,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["smoked-pork-chops"],
+      "farmProducts": [
+        "smoked-pork-chops"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "smoked pork chops", "source": "pvf", "slug": "smoked-pork-chops" },
-        { "amount": "1/2 head", "item": "green cabbage, sliced", "source": "market" },
-        { "amount": "1 lb", "item": "small potatoes, halved", "source": "market" },
-        { "amount": "1", "item": "onion, sliced", "source": "market" },
-        { "amount": "2 tbsp", "item": "butter or lard", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "apple cider vinegar", "source": "pantry" },
-        { "amount": "1 tsp", "item": "caraway seeds (optional but right)", "source": "pantry" },
-        { "amount": "1 cup", "item": "stock or water", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, grainy mustard for serving", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "smoked pork chops",
+          "source": "pvf",
+          "slug": "smoked-pork-chops",
+          "lb": 2
+        },
+        {
+          "amount": "1/2 head",
+          "item": "green cabbage, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "small potatoes, halved",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "onion, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter or lard",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "apple cider vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tsp",
+          "item": "caraway seeds (optional but right)",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 cup",
+          "item": "stock or water",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, grainy mustard for serving",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Simmer the potatoes in salted water until just tender, about 12 minutes. Drain.",
@@ -327,7 +761,11 @@
       ],
       "marketTip": "Storage cabbage and potatoes are the workhorses of the Rochester winter markets — a head of cabbage keeps a month in the fridge, so buy it when you see it.",
       "pvfNote": "These are our regular pasture-raised, corn-and-soy-free chops, brined and smoked at Timberline Meats. The smoking is real — no liquid smoke, no shortcuts — which is why the pan smells like a smokehouse in about ninety seconds.",
-      "tags": ["one-pan", "quick", "gluten-free"]
+      "tags": [
+        "one-pan",
+        "quick",
+        "gluten-free"
+      ]
     },
     {
       "id": "carnitas-tacos",
@@ -335,24 +773,77 @@
       "tagline": "Slow-simmered, then crisped in its own fat — one roast, a pile of tortillas, and taco night is handled.",
       "mealType": "sunday-dinner",
       "cuisine": "mexican",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "3 hr",
       "totalTime": "3 hr 15 min",
       "totalMinutes": 195,
       "servings": 6,
       "difficulty": "Easy",
-      "farmProducts": ["pork-butt-roast"],
+      "farmProducts": [
+        "pork-butt-roast"
+      ],
       "ingredients": [
-        { "amount": "3–4 lbs", "item": "pork butt roast, cut in 2-inch chunks", "source": "pvf", "slug": "pork-butt-roast" },
-        { "amount": "1", "item": "white onion, half quartered, half diced for serving", "source": "market" },
-        { "amount": "1 bunch", "item": "cilantro", "source": "market" },
-        { "amount": "2", "item": "limes", "source": "market" },
-        { "amount": "1", "item": "orange, halved", "source": "pantry" },
-        { "amount": "4 cloves", "item": "garlic, smashed", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "cumin, plus 2 bay leaves and 1 tbsp dried oregano", "source": "pantry" },
-        { "amount": "18", "item": "corn tortillas", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "3–4 lbs",
+          "item": "pork butt roast, cut in 2-inch chunks",
+          "source": "pvf",
+          "slug": "pork-butt-roast",
+          "lb": 3.5
+        },
+        {
+          "amount": "1",
+          "item": "white onion, half quartered, half diced for serving",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "cilantro",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "limes",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "orange, halved",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 cloves",
+          "item": "garlic, smashed",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "cumin, plus 2 bay leaves and 1 tbsp dried oregano",
+          "source": "pantry"
+        },
+        {
+          "amount": "18",
+          "item": "corn tortillas",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Put the pork in a Dutch oven with the quartered onion, garlic, spices, and a tablespoon of salt. Squeeze the orange over and drop the halves in. Add water to barely cover.",
@@ -363,7 +854,12 @@
       ],
       "marketTip": "Summer through early fall, make the salsa from the market: fresh tomatoes, onion, and hot peppers all peak together in August in WNY. In winter, a jar of good salsa verde does the job.",
       "pvfNote": "Carnitas is where an Idaho Pasture Pig shows off — the roast carries enough clean fat to confit itself, no added lard needed. Pasture-raised and corn-and-soy-free means that fat is worth eating, and it's where all the flavor lives.",
-      "tags": ["make-ahead", "gluten-free", "party", "kid-friendly"]
+      "tags": [
+        "make-ahead",
+        "gluten-free",
+        "party",
+        "kid-friendly"
+      ]
     },
     {
       "id": "low-slow-spare-ribs",
@@ -371,21 +867,55 @@
       "tagline": "Three unhurried hours to bend-and-tear ribs, finished sticky, with July corn on the side.",
       "mealType": "cookout",
       "cuisine": "farmhouse",
-      "months": [5, 6, 7, 8, 9],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "prepTime": "15 min",
       "cookTime": "3 hr 15 min",
       "totalTime": "3 hr 30 min",
       "totalMinutes": 210,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["pork-spare-ribs"],
+      "farmProducts": [
+        "pork-spare-ribs"
+      ],
       "ingredients": [
-        { "amount": "1 rack (3 lbs)", "item": "pork spare ribs", "source": "pvf", "slug": "pork-spare-ribs" },
-        { "amount": "4 ears", "item": "sweet corn, in husks", "source": "market" },
-        { "amount": "3 tbsp", "item": "rub: brown sugar, paprika, salt, pepper, garlic powder", "source": "pantry" },
-        { "amount": "3/4 cup", "item": "barbecue sauce (bottled or homemade)", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "butter, for the corn", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "1 rack (3 lbs)",
+          "item": "pork spare ribs",
+          "source": "pvf",
+          "slug": "pork-spare-ribs",
+          "lb": 3
+        },
+        {
+          "amount": "4 ears",
+          "item": "sweet corn, in husks",
+          "source": "market"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "rub: brown sugar, paprika, salt, pepper, garlic powder",
+          "source": "pantry"
+        },
+        {
+          "amount": "3/4 cup",
+          "item": "barbecue sauce (bottled or homemade)",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter, for the corn",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Peel the papery membrane off the bone side of the rack (grab a corner with a paper towel and pull). Coat the ribs all over with the rub.",
@@ -397,7 +927,12 @@
       ],
       "marketTip": "Mid-July through Labor Day is WNY sweet corn's window, and corn grilled in the husk the day it was picked needs nothing but butter. A dozen ears costs less than a bag of chips — get extra for tomorrow's salad.",
       "pvfNote": "Spare ribs from our Idaho Pasture Pigs carry more meat between the bones than commodity racks, and the fat renders instead of dripping out — pasture-raised on a corn-and-soy-free ration does that. Low heat and patience is the whole recipe.",
-      "tags": ["grill", "party", "gluten-free", "kid-friendly"]
+      "tags": [
+        "grill",
+        "party",
+        "gluten-free",
+        "kid-friendly"
+      ]
     },
     {
       "id": "sausage-peppers-onions",
@@ -405,23 +940,63 @@
       "tagline": "The fair-stand classic, done at home with September peppers — on a roll or over polenta.",
       "mealType": "weeknight",
       "cuisine": "italian",
-      "months": [7, 8, 9],
+      "months": [
+        7,
+        8,
+        9
+      ],
       "prepTime": "10 min",
       "cookTime": "25 min",
       "totalTime": "35 min",
       "totalMinutes": 35,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-italian-sausage-links"],
+      "farmProducts": [
+        "pork-italian-sausage-links"
+      ],
       "ingredients": [
-        { "amount": "1.5 lbs", "item": "mild Italian sausage links (or hot — dealer's choice)", "source": "pvf", "slug": "pork-italian-sausage-links" },
-        { "amount": "4", "item": "bell or Italian frying peppers, sliced in strips", "source": "market" },
-        { "amount": "2", "item": "onions, sliced", "source": "market" },
-        { "amount": "3 cloves", "item": "garlic, sliced", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "olive oil", "source": "pantry" },
-        { "amount": "1 splash", "item": "red wine vinegar", "source": "pantry" },
-        { "amount": "4", "item": "sturdy rolls, or polenta for serving", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, dried oregano", "source": "pantry" }
+        {
+          "amount": "1.5 lbs",
+          "item": "mild Italian sausage links (or hot — dealer's choice)",
+          "source": "pvf",
+          "slug": "pork-italian-sausage-links",
+          "lb": 1.5
+        },
+        {
+          "amount": "4",
+          "item": "bell or Italian frying peppers, sliced in strips",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "onions, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "3 cloves",
+          "item": "garlic, sliced",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "olive oil",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 splash",
+          "item": "red wine vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "4",
+          "item": "sturdy rolls, or polenta for serving",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, dried oregano",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Brown the sausages in a little oil in a wide skillet over medium heat, turning, about 8 minutes — they don't need to cook through yet. Set aside.",
@@ -432,7 +1007,11 @@
       ],
       "marketTip": "Late August into September, WNY pepper growers bring the good stuff — long Italian frying peppers (Carmen, Jimmy Nardello) are sweeter and thinner-walled than bells and blister beautifully. Buy ugly ones; they taste the same.",
       "pvfNote": "Our sausage is made from our own Idaho Pasture Pigs — pasture-raised, corn-and-soy-free — seasoned and linked at Timberline Meats with nothing you wouldn't keep in your own spice drawer. Read a grocery sausage label sometime and you'll see why that sentence matters.",
-      "tags": ["one-pan", "kid-friendly", "party"]
+      "tags": [
+        "one-pan",
+        "kid-friendly",
+        "party"
+      ]
     },
     {
       "id": "hot-sausage-kale-pasta",
@@ -440,23 +1019,66 @@
       "tagline": "Frost-sweetened kale, spicy crumbled sausage, pecorino, and pasta water doing its quiet magic.",
       "mealType": "weeknight",
       "cuisine": "italian",
-      "months": [1, 2, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "20 min",
       "totalTime": "30 min",
       "totalMinutes": 30,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-italian-sausage-links-hot"],
+      "farmProducts": [
+        "pork-italian-sausage-links-hot"
+      ],
       "ingredients": [
-        { "amount": "1 lb", "item": "hot Italian sausage links, casings removed", "source": "pvf", "slug": "pork-italian-sausage-links-hot" },
-        { "amount": "1 bunch", "item": "kale (lacinato or curly), stemmed and torn", "source": "market" },
-        { "amount": "1 lb", "item": "orecchiette or rigatoni", "source": "pantry" },
-        { "amount": "4 cloves", "item": "garlic, sliced", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "grated pecorino or parmesan, plus more to serve", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "olive oil", "source": "pantry" },
-        { "amount": "1", "item": "lemon (zest and a squeeze)", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "1 lb",
+          "item": "hot Italian sausage links, casings removed",
+          "source": "pvf",
+          "slug": "pork-italian-sausage-links-hot",
+          "lb": 1
+        },
+        {
+          "amount": "1 bunch",
+          "item": "kale (lacinato or curly), stemmed and torn",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "orecchiette or rigatoni",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 cloves",
+          "item": "garlic, sliced",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "grated pecorino or parmesan, plus more to serve",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "olive oil",
+          "source": "pantry"
+        },
+        {
+          "amount": "1",
+          "item": "lemon (zest and a squeeze)",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Get a big pot of well-salted water boiling and cook the pasta a minute shy of the box.",
@@ -468,7 +1090,10 @@
       ],
       "marketTip": "Kale after the first frost is a different vegetable — sweeter, more tender. October through the winter markets, look for lacinato (the dark bumpy one). It's also one of the last things standing at WNY markets in December.",
       "pvfNote": "The heat in our hot Italian sausage is honest chili and spice, not mystery 'flavorings' — made from our pasture-raised, corn-and-soy-free pigs at Timberline Meats. It renders clean fat that becomes the backbone of this sauce.",
-      "tags": ["quick", "one-pot"]
+      "tags": [
+        "quick",
+        "one-pot"
+      ]
     },
     {
       "id": "chorizo-egg-breakfast-tacos",
@@ -476,23 +1101,75 @@
       "tagline": "Crumbled chorizo, soft-scrambled orange-yolk eggs, warm tortillas — weekend breakfast with some swagger.",
       "mealType": "breakfast",
       "cuisine": "mexican",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "15 min",
       "totalTime": "25 min",
       "totalMinutes": 25,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chorizo-sausage-links", "chicken-eggs"],
+      "farmProducts": [
+        "chorizo-sausage-links",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "1 lb", "item": "chorizo sausage links, casings removed", "source": "pvf", "slug": "chorizo-sausage-links" },
-        { "amount": "8", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "1", "item": "avocado, sliced", "source": "market" },
-        { "amount": "1 handful", "item": "cilantro", "source": "market" },
-        { "amount": "8", "item": "corn or flour tortillas", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "crumbled queso fresco or shredded cheddar", "source": "pantry" },
-        { "amount": "1", "item": "lime, in wedges", "source": "pantry" },
-        { "amount": "", "item": "salt and hot sauce", "source": "pantry" }
+        {
+          "amount": "1 lb",
+          "item": "chorizo sausage links, casings removed",
+          "source": "pvf",
+          "slug": "chorizo-sausage-links",
+          "lb": 1
+        },
+        {
+          "amount": "8",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 8
+        },
+        {
+          "amount": "1",
+          "item": "avocado, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1 handful",
+          "item": "cilantro",
+          "source": "market"
+        },
+        {
+          "amount": "8",
+          "item": "corn or flour tortillas",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "crumbled queso fresco or shredded cheddar",
+          "source": "pantry"
+        },
+        {
+          "amount": "1",
+          "item": "lime, in wedges",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and hot sauce",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Brown the chorizo in a dry skillet over medium heat, breaking it up, 6 to 8 minutes, until crisp at the edges. Push it to one side.",
@@ -503,7 +1180,10 @@
       ],
       "marketTip": "In summer, skip the avocado and spoon on chopped fresh market tomatoes with a pinch of salt — August tomatoes and chorizo are made for each other.",
       "pvfNote": "Our chorizo comes from our Idaho Pasture Pigs, and the eggs from hens on the same pasture eating a corn-and-soy-free layer ration from County Line Feeds. Those deep-orange yolks aren't a filter. That's just what eggs look like when the hen eats right.",
-      "tags": ["quick", "kid-friendly"]
+      "tags": [
+        "quick",
+        "kid-friendly"
+      ]
     },
     {
       "id": "full-farm-breakfast",
@@ -511,22 +1191,70 @@
       "tagline": "Breakfast sausage, crispy home fries, and fried eggs with yolks like the sun — the Saturday standard.",
       "mealType": "breakfast",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "30 min",
       "totalTime": "40 min",
       "totalMinutes": 40,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-breakfast-sausage-links", "chicken-eggs"],
+      "farmProducts": [
+        "pork-breakfast-sausage-links",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "1 lb", "item": "pork breakfast sausage links", "source": "pvf", "slug": "pork-breakfast-sausage-links" },
-        { "amount": "8", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "1.5 lbs", "item": "potatoes, diced small", "source": "market" },
-        { "amount": "1", "item": "onion, diced", "source": "market" },
-        { "amount": "2 tbsp", "item": "butter or reserved sausage fat", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, paprika", "source": "pantry" },
-        { "amount": "", "item": "toast and jam for the table", "source": "pantry" }
+        {
+          "amount": "1 lb",
+          "item": "pork breakfast sausage links",
+          "source": "pvf",
+          "slug": "pork-breakfast-sausage-links",
+          "lb": 1
+        },
+        {
+          "amount": "8",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 8
+        },
+        {
+          "amount": "1.5 lbs",
+          "item": "potatoes, diced small",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "onion, diced",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter or reserved sausage fat",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, paprika",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "toast and jam for the table",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Start the potatoes: get them sizzling in butter in a wide skillet over medium heat with a pinch of salt. Stir every few minutes, not constantly — crust needs contact time. About 20 minutes total; add the onion halfway.",
@@ -537,7 +1265,10 @@
       ],
       "marketTip": "New potatoes from July markets make the creamiest home fries; storage russets from winter markets make the crispiest. There's no wrong season for this breakfast.",
       "pvfNote": "The sausage is our own pasture-raised, corn-and-soy-free pork in a simple breakfast seasoning, and the eggs come from hens that moved to fresh grass the morning they were laid... give or take. Weekend breakfast is the easiest place to taste what the feed changes.",
-      "tags": ["kid-friendly", "gluten-free"]
+      "tags": [
+        "kid-friendly",
+        "gluten-free"
+      ]
     },
     {
       "id": "august-blt",
@@ -545,21 +1276,53 @@
       "tagline": "Thick traditional bacon, a tomato that was on the vine yesterday, and mayo on good toast. That's it. That's the sandwich.",
       "mealType": "weeknight",
       "cuisine": "farmhouse",
-      "months": [7, 8, 9],
+      "months": [
+        7,
+        8,
+        9
+      ],
       "prepTime": "10 min",
       "cookTime": "12 min",
       "totalTime": "22 min",
       "totalMinutes": 22,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-smoked-bacon"],
+      "farmProducts": [
+        "pork-smoked-bacon"
+      ],
       "ingredients": [
-        { "amount": "1 lb", "item": "traditional bacon", "source": "pvf", "slug": "pork-smoked-bacon" },
-        { "amount": "2", "item": "big ripe slicing tomatoes (Brandywine if you find them)", "source": "market" },
-        { "amount": "1 head", "item": "crisp lettuce", "source": "market" },
-        { "amount": "8 slices", "item": "good sandwich bread", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "mayonnaise", "source": "pantry" },
-        { "amount": "", "item": "flaky salt and black pepper", "source": "pantry" }
+        {
+          "amount": "1 lb",
+          "item": "traditional bacon",
+          "source": "pvf",
+          "slug": "pork-smoked-bacon",
+          "lb": 1
+        },
+        {
+          "amount": "2",
+          "item": "big ripe slicing tomatoes (Brandywine if you find them)",
+          "source": "market"
+        },
+        {
+          "amount": "1 head",
+          "item": "crisp lettuce",
+          "source": "market"
+        },
+        {
+          "amount": "8 slices",
+          "item": "good sandwich bread",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "mayonnaise",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "flaky salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Lay the bacon in a cold skillet, then bring it up to medium. Cook, turning occasionally, until it's exactly how you like it. Save the fat — that's tomorrow's home fries.",
@@ -570,7 +1333,10 @@
       ],
       "marketTip": "This sandwich exists for maybe six weeks a year, when WNY field tomatoes hit the markets in late July. Buy the heavy, ugly, deeply colored ones and never refrigerate them.",
       "pvfNote": "Traditional bacon from our Idaho Pasture Pigs, cured and smoked at Timberline Meats. Pigs that live outside on a corn-and-soy-free ration grow bacon with real depth — and it doesn't shrivel to half its size in the pan, because it isn't pumped with water.",
-      "tags": ["quick", "kid-friendly"]
+      "tags": [
+        "quick",
+        "kid-friendly"
+      ]
     },
     {
       "id": "ham-hock-white-bean-soup",
@@ -578,25 +1344,75 @@
       "tagline": "Two smoked hocks, a pound of beans, and a slow afternoon — the most supper for the fewest dollars all winter.",
       "mealType": "soup-stew",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "2 hr 30 min",
       "totalTime": "2 hr 45 min",
       "totalMinutes": 165,
       "servings": 6,
       "difficulty": "Easy",
-      "farmProducts": ["pork-smoked-ham-hocks"],
+      "farmProducts": [
+        "pork-smoked-ham-hocks"
+      ],
       "ingredients": [
-        { "amount": "2", "item": "smoked ham hocks", "source": "pvf", "slug": "pork-smoked-ham-hocks" },
-        { "amount": "1 lb", "item": "dried white beans (great northern or cannellini), soaked overnight", "source": "pantry" },
-        { "amount": "3", "item": "carrots, diced", "source": "market" },
-        { "amount": "1", "item": "onion, diced", "source": "market" },
-        { "amount": "2 stalks", "item": "celery or 1 cup diced celeriac", "source": "market" },
-        { "amount": "1 bunch", "item": "kale or collards, torn (optional, very good)", "source": "market" },
-        { "amount": "3 cloves", "item": "garlic, minced", "source": "pantry" },
-        { "amount": "2", "item": "bay leaves", "source": "pantry" },
-        { "amount": "1 splash", "item": "cider vinegar", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "2",
+          "item": "smoked ham hocks",
+          "source": "pvf",
+          "slug": "pork-smoked-ham-hocks",
+          "lb": 2.5
+        },
+        {
+          "amount": "1 lb",
+          "item": "dried white beans (great northern or cannellini), soaked overnight",
+          "source": "pantry"
+        },
+        {
+          "amount": "3",
+          "item": "carrots, diced",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "onion, diced",
+          "source": "market"
+        },
+        {
+          "amount": "2 stalks",
+          "item": "celery or 1 cup diced celeriac",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "kale or collards, torn (optional, very good)",
+          "source": "market"
+        },
+        {
+          "amount": "3 cloves",
+          "item": "garlic, minced",
+          "source": "pantry"
+        },
+        {
+          "amount": "2",
+          "item": "bay leaves",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 splash",
+          "item": "cider vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Put the hocks, drained beans, and bay leaves in a big pot. Cover with water by two inches, bring to a simmer, and skim any foam.",
@@ -608,7 +1424,12 @@
       ],
       "marketTip": "Winter storage vegetables — carrots, onions, celeriac — carry the Rochester winter markets, and celeriac is the sleeper here: it does everything celery does with twice the flavor.",
       "pvfNote": "Hocks are the cut most people skip and shouldn't. Ours come from pasture-raised, corn-and-soy-free Idaho Pasture Pigs and get real smoke at Timberline Meats — two hocks season and thicken a whole pot the way no bouillon cube ever will.",
-      "tags": ["one-pot", "make-ahead", "gluten-free", "budget"]
+      "tags": [
+        "one-pot",
+        "make-ahead",
+        "gluten-free",
+        "budget"
+      ]
     },
     {
       "id": "ginger-pork-lettuce-wraps",
@@ -616,25 +1437,74 @@
       "tagline": "Hot, gingery ground pork piled into cold summer lettuce — dinner that feels like a snack in the best way.",
       "mealType": "weeknight",
       "cuisine": "asian",
-      "months": [5, 6, 7, 8],
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ],
       "prepTime": "15 min",
       "cookTime": "12 min",
       "totalTime": "27 min",
       "totalMinutes": 27,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-ground"],
+      "farmProducts": [
+        "pork-ground"
+      ],
       "ingredients": [
-        { "amount": "1.5 lbs", "item": "ground pork", "source": "pvf", "slug": "pork-ground" },
-        { "amount": "1 head", "item": "butter or bibb lettuce, leaves separated", "source": "market" },
-        { "amount": "2", "item": "cucumbers, sliced into matchsticks", "source": "market" },
-        { "amount": "1 bunch", "item": "scallions, sliced", "source": "market" },
-        { "amount": "2 tbsp", "item": "grated fresh ginger", "source": "pantry" },
-        { "amount": "3 cloves", "item": "garlic, minced", "source": "pantry" },
-        { "amount": "3 tbsp", "item": "soy sauce or tamari", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "honey", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "rice vinegar", "source": "pantry" },
-        { "amount": "", "item": "chili crisp or sriracha, roasted peanuts (optional)", "source": "pantry" }
+        {
+          "amount": "1.5 lbs",
+          "item": "ground pork",
+          "source": "pvf",
+          "slug": "pork-ground",
+          "lb": 1.5
+        },
+        {
+          "amount": "1 head",
+          "item": "butter or bibb lettuce, leaves separated",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "cucumbers, sliced into matchsticks",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "scallions, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "grated fresh ginger",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 cloves",
+          "item": "garlic, minced",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "soy sauce or tamari",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "honey",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "rice vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "chili crisp or sriracha, roasted peanuts (optional)",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Stir together the soy sauce, honey, and vinegar.",
@@ -645,7 +1515,11 @@
       ],
       "marketTip": "Soft-head lettuces (butter, bibb) show up at WNY markets from late May and make the best cups — the leaves are little bowls. Market cucumbers in July snap like nothing from a plastic sleeve.",
       "pvfNote": "Ground pork from our Idaho Pasture Pigs is a whole-animal grind, not trimmings — pasture-raised, corn-and-soy-free, and it browns with a depth that makes a five-ingredient sauce taste like takeout you'd drive for.",
-      "tags": ["quick", "gluten-free", "kid-friendly"]
+      "tags": [
+        "quick",
+        "gluten-free",
+        "kid-friendly"
+      ]
     },
     {
       "id": "herb-butter-turkey-breast",
@@ -653,23 +1527,63 @@
       "tagline": "Thanksgiving for six without the 5 a.m. alarm — a bone-in breast, herb butter, and ninety honest minutes.",
       "mealType": "special",
       "cuisine": "farmhouse",
-      "months": [11, 12],
+      "months": [
+        11,
+        12
+      ],
       "prepTime": "20 min",
       "cookTime": "1 hr 30 min",
       "totalTime": "1 hr 50 min",
       "totalMinutes": 110,
       "servings": 6,
       "difficulty": "Medium",
-      "farmProducts": ["bone-in-turkey-breast"],
+      "farmProducts": [
+        "bone-in-turkey-breast"
+      ],
       "ingredients": [
-        { "amount": "1 (5–6 lb)", "item": "bone-in turkey breast", "source": "pvf", "slug": "bone-in-turkey-breast" },
-        { "amount": "6 tbsp", "item": "butter, softened", "source": "pantry" },
-        { "amount": "1 bunch", "item": "fresh sage, thyme, and rosemary, chopped", "source": "market" },
-        { "amount": "1 lb", "item": "Brussels sprouts, halved", "source": "market" },
-        { "amount": "1 lb", "item": "sweet potatoes, in wedges", "source": "market" },
-        { "amount": "2", "item": "onions, quartered", "source": "market" },
-        { "amount": "1 cup", "item": "stock or dry white wine", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "1 (5–6 lb)",
+          "item": "bone-in turkey breast",
+          "source": "pvf",
+          "slug": "bone-in-turkey-breast",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "6 tbsp",
+          "item": "butter, softened",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "fresh sage, thyme, and rosemary, chopped",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "Brussels sprouts, halved",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "sweet potatoes, in wedges",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "onions, quartered",
+          "source": "market"
+        },
+        {
+          "amount": "1 cup",
+          "item": "stock or dry white wine",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Salt the breast all over the night before if you can — even a few hours makes a difference. Bring it toward room temperature before roasting.",
@@ -681,7 +1595,11 @@
       ],
       "marketTip": "November markets still carry Brussels sprouts, sweet potatoes, and fresh herbs — sprouts sold on the stalk stay fresher and roast sweeter after frost.",
       "pvfNote": "Our turkeys range on the same Genesee Valley pasture as the chickens, on a corn-and-soy-free ration. A pastured bone-in breast has actual turkey flavor — this is the answer for holidays where a whole bird is too much and dry white meat isn't an option.",
-      "tags": ["holiday", "gluten-free", "make-ahead"]
+      "tags": [
+        "holiday",
+        "gluten-free",
+        "make-ahead"
+      ]
     },
     {
       "id": "braised-turkey-legs",
@@ -689,24 +1607,69 @@
       "tagline": "The fairground favorite, grown up — turkey legs braised until the meat slips off the bone.",
       "mealType": "sunday-dinner",
       "cuisine": "farmhouse",
-      "months": [1, 10, 11, 12],
+      "months": [
+        1,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "2 hr 15 min",
       "totalTime": "2 hr 30 min",
       "totalMinutes": 150,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["turkey-legs"],
+      "farmProducts": [
+        "turkey-legs"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "turkey legs", "source": "pvf", "slug": "turkey-legs" },
-        { "amount": "2 cups", "item": "apple cider", "source": "market" },
-        { "amount": "1 lb", "item": "carrots, in chunks", "source": "market" },
-        { "amount": "1 lb", "item": "parsnips or turnips, in chunks", "source": "market" },
-        { "amount": "2", "item": "onions, quartered", "source": "market" },
-        { "amount": "2 cups", "item": "stock", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "butter or lard", "source": "pantry" },
-        { "amount": "2 sprigs", "item": "fresh thyme and 2 bay leaves", "source": "market" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "turkey legs",
+          "source": "pvf",
+          "slug": "turkey-legs",
+          "lb": 4
+        },
+        {
+          "amount": "2 cups",
+          "item": "apple cider",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "carrots, in chunks",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "parsnips or turnips, in chunks",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "onions, quartered",
+          "source": "market"
+        },
+        {
+          "amount": "2 cups",
+          "item": "stock",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter or lard",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 sprigs",
+          "item": "fresh thyme and 2 bay leaves",
+          "source": "market"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 325°F. Season the legs generously and brown them hard in fat in a Dutch oven, about 5 minutes a side. Set aside.",
@@ -717,7 +1680,11 @@
       ],
       "marketTip": "This is a late-October dish: fresh cider, frost-sweet parsnips, and storage carrots all peak together at WNY stands right as the weather turns.",
       "pvfNote": "Legs from a turkey that actually walked its pasture are all working muscle — pasture-raised, corn-and-soy-free, and built for exactly this kind of slow cooking. Rich as duck confit, at a fraction of the price per pound.",
-      "tags": ["one-pot", "gluten-free", "budget"]
+      "tags": [
+        "one-pot",
+        "gluten-free",
+        "budget"
+      ]
     },
     {
       "id": "braised-lamb-shanks",
@@ -725,25 +1692,76 @@
       "tagline": "Shanks braised until they wave a white flag, over something creamy — the special-occasion pot that cooks itself.",
       "mealType": "special",
       "cuisine": "mediterranean",
-      "months": [1, 2, 3, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
       "prepTime": "20 min",
       "cookTime": "3 hr",
       "totalTime": "3 hr 20 min",
       "totalMinutes": 200,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["lamb-shanks"],
+      "farmProducts": [
+        "lamb-shanks"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "lamb shanks", "source": "pvf", "slug": "lamb-shanks" },
-        { "amount": "2 cups", "item": "dry red wine", "source": "pantry" },
-        { "amount": "2 cups", "item": "stock", "source": "pantry" },
-        { "amount": "1 can (14 oz)", "item": "crushed tomatoes", "source": "pantry" },
-        { "amount": "3", "item": "carrots, diced", "source": "market" },
-        { "amount": "1", "item": "onion, diced", "source": "market" },
-        { "amount": "6 cloves", "item": "garlic, smashed", "source": "pantry" },
-        { "amount": "2 sprigs", "item": "rosemary, plus 2 bay leaves", "source": "market" },
-        { "amount": "1 strip", "item": "orange zest", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, olive oil; polenta or mashed potatoes for serving", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "lamb shanks",
+          "source": "pvf",
+          "slug": "lamb-shanks",
+          "lb": 3.5
+        },
+        {
+          "amount": "2 cups",
+          "item": "dry red wine",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 cups",
+          "item": "stock",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 can (14 oz)",
+          "item": "crushed tomatoes",
+          "source": "pantry"
+        },
+        {
+          "amount": "3",
+          "item": "carrots, diced",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "onion, diced",
+          "source": "market"
+        },
+        {
+          "amount": "6 cloves",
+          "item": "garlic, smashed",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 sprigs",
+          "item": "rosemary, plus 2 bay leaves",
+          "source": "market"
+        },
+        {
+          "amount": "1 strip",
+          "item": "orange zest",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, olive oil; polenta or mashed potatoes for serving",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 300°F. Season the shanks well and brown them on all sides in olive oil in a heavy Dutch oven — take your time, 10 to 12 minutes total. Set aside.",
@@ -755,7 +1773,12 @@
       ],
       "marketTip": "Winter carrots and storage onions from the Rochester winter markets are all the fresh produce this needs — spend the rest of the budget on a wine you'd actually drink.",
       "pvfNote": "Our Katahdin and White Dorper lambs stay with their mothers until weaning and finish entirely on Genesee Valley pasture — no grain at all. Grass-fed lamb from hair sheep is mild and clean-tasting, and the shank is its best-kept secret.",
-      "tags": ["holiday", "make-ahead", "one-pot", "gluten-free"]
+      "tags": [
+        "holiday",
+        "make-ahead",
+        "one-pot",
+        "gluten-free"
+      ]
     },
     {
       "id": "grilled-lamb-loin-chops",
@@ -763,23 +1786,64 @@
       "tagline": "Little lamb T-bones over hot coals, with peas and mint doing what peas and mint have always done.",
       "mealType": "special",
       "cuisine": "mediterranean",
-      "months": [4, 5, 6, 7],
+      "months": [
+        4,
+        5,
+        6,
+        7
+      ],
       "prepTime": "15 min",
       "cookTime": "10 min",
       "totalTime": "25 min",
       "totalMinutes": 25,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["lamb-steaks"],
+      "farmProducts": [
+        "lamb-steaks"
+      ],
       "ingredients": [
-        { "amount": "8", "item": "lamb loin chops", "source": "pvf", "slug": "lamb-steaks" },
-        { "amount": "2 cups", "item": "shelled peas or snap peas", "source": "market" },
-        { "amount": "1 bunch", "item": "mint", "source": "market" },
-        { "amount": "1 bunch", "item": "spring onions", "source": "market" },
-        { "amount": "1", "item": "lemon", "source": "pantry" },
-        { "amount": "3 tbsp", "item": "olive oil", "source": "pantry" },
-        { "amount": "2 cloves", "item": "garlic, grated", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "8",
+          "item": "lamb loin chops",
+          "source": "pvf",
+          "slug": "lamb-steaks",
+          "lb": 1.7
+        },
+        {
+          "amount": "2 cups",
+          "item": "shelled peas or snap peas",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "mint",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "spring onions",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "lemon",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "olive oil",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 cloves",
+          "item": "garlic, grated",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Rub the chops with olive oil, the garlic, salt, and pepper. Let them sit at room temperature for 20 minutes while the grill gets properly hot.",
@@ -790,7 +1854,11 @@
       ],
       "marketTip": "Snap peas hit WNY markets in late May and shelling peas in June — buy more than the recipe needs, because half of them won't survive the ride home. Mint is at every herb stand all spring.",
       "pvfNote": "Loin chops are the tenderloin and strip of the lamb in one small cut. Ours come from Katahdin and White Dorper lambs raised with their mothers on pasture, never fed grain — mild enough for people who think they don't like lamb.",
-      "tags": ["grill", "quick", "gluten-free"]
+      "tags": [
+        "grill",
+        "quick",
+        "gluten-free"
+      ]
     },
     {
       "id": "asparagus-spring-frittata",
@@ -798,23 +1866,63 @@
       "tagline": "May asparagus, sharp cheddar, and eggs with yolks that turn the whole thing gold.",
       "mealType": "breakfast",
       "cuisine": "italian",
-      "months": [4, 5, 6],
+      "months": [
+        4,
+        5,
+        6
+      ],
       "prepTime": "10 min",
       "cookTime": "20 min",
       "totalTime": "30 min",
       "totalMinutes": 30,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-eggs"],
+      "farmProducts": [
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "10", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "1 bunch", "item": "asparagus, cut in 1-inch pieces", "source": "market" },
-        { "amount": "1 bunch", "item": "spring onions, sliced", "source": "market" },
-        { "amount": "1 handful", "item": "fresh dill or chives", "source": "market" },
-        { "amount": "1 cup", "item": "grated sharp cheddar or crumbled goat cheese", "source": "pantry" },
-        { "amount": "3 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "1/4 cup", "item": "cream or whole milk", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "10",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 10
+        },
+        {
+          "amount": "1 bunch",
+          "item": "asparagus, cut in 1-inch pieces",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "spring onions, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1 handful",
+          "item": "fresh dill or chives",
+          "source": "market"
+        },
+        {
+          "amount": "1 cup",
+          "item": "grated sharp cheddar or crumbled goat cheese",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/4 cup",
+          "item": "cream or whole milk",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 375°F. Whisk the eggs with the cream, a teaspoon of salt, plenty of pepper, and half the cheese.",
@@ -825,7 +1933,12 @@
       ],
       "marketTip": "Asparagus is the star of May in WNY — thin, bright spears with tight tips, ideally picked that morning. It's a six-week season. When it's gone, it's gone.",
       "pvfNote": "A frittata is mostly eggs, so the eggs have to carry it. Ours come from hens on fresh Genesee Valley pasture eating a corn-and-soy-free layer ration from County Line Feeds — the yolks are deep orange and the difference shows in every slice.",
-      "tags": ["quick", "gluten-free", "make-ahead", "vegetarian-adjacent"]
+      "tags": [
+        "quick",
+        "gluten-free",
+        "make-ahead",
+        "vegetarian-adjacent"
+      ]
     },
     {
       "id": "garlic-butter-bone-in-breasts",
@@ -833,23 +1946,67 @@
       "tagline": "The bone keeps it juicy, the butter bastes itself, and the pan sauce is four minutes of glory.",
       "mealType": "weeknight",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 4, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "40 min",
       "totalTime": "50 min",
       "totalMinutes": 50,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["chicken-breast-bone-in"],
+      "farmProducts": [
+        "chicken-breast-bone-in"
+      ],
       "ingredients": [
-        { "amount": "2 (1.5 lbs)", "item": "bone-in, skin-on chicken breasts", "source": "pvf", "slug": "chicken-breast-bone-in" },
-        { "amount": "1 lb", "item": "small potatoes, halved", "source": "market" },
-        { "amount": "1 bunch", "item": "kale or chard, torn", "source": "market" },
-        { "amount": "4 tbsp", "item": "butter, softened", "source": "pantry" },
-        { "amount": "4 cloves", "item": "garlic, grated", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "stock or white wine", "source": "pantry" },
-        { "amount": "1", "item": "lemon", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, fresh thyme", "source": "pantry" }
+        {
+          "amount": "2 (1.5 lbs)",
+          "item": "bone-in, skin-on chicken breasts",
+          "source": "pvf",
+          "slug": "chicken-breast-bone-in",
+          "lb": 2
+        },
+        {
+          "amount": "1 lb",
+          "item": "small potatoes, halved",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "kale or chard, torn",
+          "source": "market"
+        },
+        {
+          "amount": "4 tbsp",
+          "item": "butter, softened",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 cloves",
+          "item": "garlic, grated",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "stock or white wine",
+          "source": "pantry"
+        },
+        {
+          "amount": "1",
+          "item": "lemon",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, fresh thyme",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 425°F. Salt the breasts well, ideally an hour ahead. Mash the butter with the garlic, thyme, and a pinch of salt.",
@@ -861,7 +2018,11 @@
       ],
       "marketTip": "Winter markets in Rochester carry storage potatoes and greenhouse or frost-hardy greens right through the cold months — kale that's been through a frost is sweeter than anything from September.",
       "pvfNote": "A bone-in breast from a pasture-raised, corn-and-soy-free bird is a different cut than the water-plumped boneless kind — the bone and skin protect it, so you get white meat that actually tastes like the dark.",
-      "tags": ["one-pan", "gluten-free", "kid-friendly"]
+      "tags": [
+        "one-pan",
+        "gluten-free",
+        "kid-friendly"
+      ]
     },
     {
       "id": "canadian-bacon-breakfast-stack",
@@ -869,22 +2030,70 @@
       "tagline": "Toasted English muffin, seared Canadian bacon, a runny-yolk egg — the diner classic, done right at home.",
       "mealType": "breakfast",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "10 min",
       "totalTime": "20 min",
       "totalMinutes": 20,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["canadian-bacon", "chicken-eggs"],
+      "farmProducts": [
+        "canadian-bacon",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "12 slices", "item": "Canadian bacon", "source": "pvf", "slug": "canadian-bacon" },
-        { "amount": "4", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "2", "item": "scallions or chives, sliced", "source": "market" },
-        { "amount": "4", "item": "English muffins, split", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "1 tsp", "item": "Dijon mustard, stirred into 1/4 cup mayo (cheater's sauce)", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, hot sauce", "source": "pantry" }
+        {
+          "amount": "12 slices",
+          "item": "Canadian bacon",
+          "source": "pvf",
+          "slug": "canadian-bacon",
+          "lb": 1
+        },
+        {
+          "amount": "4",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 4
+        },
+        {
+          "amount": "2",
+          "item": "scallions or chives, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "4",
+          "item": "English muffins, split",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tsp",
+          "item": "Dijon mustard, stirred into 1/4 cup mayo (cheater's sauce)",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, hot sauce",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Toast the muffins and spread with the Dijon-mayo.",
@@ -895,7 +2104,10 @@
       ],
       "marketTip": "This one's a year-rounder — but in June, a pile of market strawberries on the side turns it into a proper weekend breakfast.",
       "pvfNote": "Canadian bacon is the pork loin, brined and smoked at Timberline Meats — from the same pasture-raised, corn-and-soy-free Idaho Pasture Pigs as everything else we sell. Lean, meaty, and nothing like the pressed discs on a fast-food sandwich.",
-      "tags": ["quick", "kid-friendly"]
+      "tags": [
+        "quick",
+        "kid-friendly"
+      ]
     },
     {
       "id": "braised-fresh-ham-hocks",
@@ -903,23 +2115,66 @@
       "tagline": "The unsmoked hock, braised until the meat surrenders — a beer-hall supper from a five-dollar cut.",
       "mealType": "sunday-dinner",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "3 hr",
       "totalTime": "3 hr 15 min",
       "totalMinutes": 195,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["fresh-ham-hocks"],
+      "farmProducts": [
+        "fresh-ham-hocks"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "fresh ham hocks", "source": "pvf", "slug": "fresh-ham-hocks" },
-        { "amount": "2 cups", "item": "apple cider (or a malty beer)", "source": "market" },
-        { "amount": "1/2 head", "item": "cabbage, cut in wedges", "source": "market" },
-        { "amount": "1 lb", "item": "small potatoes", "source": "market" },
-        { "amount": "2", "item": "onions, quartered", "source": "market" },
-        { "amount": "2 cups", "item": "stock or water", "source": "pantry" },
-        { "amount": "1 tbsp", "item": "caraway seeds and 2 bay leaves", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, grainy mustard for the table", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "fresh ham hocks",
+          "source": "pvf",
+          "slug": "fresh-ham-hocks",
+          "lb": 5
+        },
+        {
+          "amount": "2 cups",
+          "item": "apple cider (or a malty beer)",
+          "source": "market"
+        },
+        {
+          "amount": "1/2 head",
+          "item": "cabbage, cut in wedges",
+          "source": "market"
+        },
+        {
+          "amount": "1 lb",
+          "item": "small potatoes",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "onions, quartered",
+          "source": "market"
+        },
+        {
+          "amount": "2 cups",
+          "item": "stock or water",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tbsp",
+          "item": "caraway seeds and 2 bay leaves",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, grainy mustard for the table",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 300°F. Season the hocks and brown them on all sides in a little fat in a Dutch oven, about 10 minutes total.",
@@ -931,7 +2186,11 @@
       ],
       "marketTip": "Storage cabbage, onions, and potatoes from the winter markets are all this needs — the cider is the WNY touch and worth seeking out over beer.",
       "pvfNote": "Fresh hocks are the same cut as our smoked ones, straight from the pasture-raised, corn-and-soy-free pigs with no cure at all — which means all that skin and collagen turns silky in the braise. Cheapest Sunday dinner on the price list.",
-      "tags": ["one-pot", "budget", "gluten-free"]
+      "tags": [
+        "one-pot",
+        "budget",
+        "gluten-free"
+      ]
     },
     {
       "id": "maple-glazed-ham-steak",
@@ -939,22 +2198,70 @@
       "tagline": "A smoked ham steak seared in maple and butter, with eggs fried in the glaze. Breakfast for dinner is legal.",
       "mealType": "breakfast",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "5 min",
       "cookTime": "15 min",
       "totalTime": "20 min",
       "totalMinutes": 20,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["pork-ham-steak", "chicken-eggs"],
+      "farmProducts": [
+        "pork-ham-steak",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "2", "item": "smoked ham steaks", "source": "pvf", "slug": "pork-ham-steak" },
-        { "amount": "8", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "3 tbsp", "item": "maple syrup", "source": "market" },
-        { "amount": "2 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "1 tsp", "item": "Dijon or grainy mustard", "source": "pantry" },
-        { "amount": "1 splash", "item": "cider vinegar", "source": "pantry" },
-        { "amount": "", "item": "black pepper; toast for the table", "source": "pantry" }
+        {
+          "amount": "2",
+          "item": "smoked ham steaks",
+          "source": "pvf",
+          "slug": "pork-ham-steak",
+          "lb": 2
+        },
+        {
+          "amount": "8",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 8
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "maple syrup",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tsp",
+          "item": "Dijon or grainy mustard",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 splash",
+          "item": "cider vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "black pepper; toast for the table",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Pat the ham steaks dry. Sear in butter in a big skillet over medium-high, 3 minutes a side, until browned at the edges. They're fully cooked — you're building color and warming them through.",
@@ -964,7 +2271,11 @@
       ],
       "marketTip": "WNY maple producers are at the Rochester markets year-round, and this is where the dark, late-season syrup shines — more maple flavor, stands up to smoke and salt.",
       "pvfNote": "Ham steaks come from the hind leg of our Idaho Pasture Pigs, brined and smoked at Timberline Meats. Pasture-raised and corn-and-soy-free means it's ham that tastes like pork, not just salt — one steak feeds two people easy.",
-      "tags": ["quick", "kid-friendly", "gluten-free"]
+      "tags": [
+        "quick",
+        "kid-friendly",
+        "gluten-free"
+      ]
     },
     {
       "id": "full-irish-breakfast",
@@ -972,23 +2283,75 @@
       "tagline": "Back bacon like they cut it in Cork — meaty, not crispy — with eggs, beans, and grilled tomato.",
       "mealType": "breakfast",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "20 min",
       "totalTime": "30 min",
       "totalMinutes": 30,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["irish-bacon", "chicken-eggs"],
+      "farmProducts": [
+        "irish-bacon",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "12 slices", "item": "Irish bacon (rashers)", "source": "pvf", "slug": "irish-bacon" },
-        { "amount": "8", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "2", "item": "tomatoes, halved (in summer, from the market)", "source": "market" },
-        { "amount": "8 oz", "item": "mushrooms, halved", "source": "market" },
-        { "amount": "1 can", "item": "white beans in tomato sauce (or good baked beans)", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "4 slices", "item": "brown bread or sourdough, toasted", "source": "pantry" },
-        { "amount": "", "item": "salt, black pepper, strong tea", "source": "pantry" }
+        {
+          "amount": "12 slices",
+          "item": "Irish bacon (rashers)",
+          "source": "pvf",
+          "slug": "irish-bacon",
+          "lb": 1
+        },
+        {
+          "amount": "8",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 8
+        },
+        {
+          "amount": "2",
+          "item": "tomatoes, halved (in summer, from the market)",
+          "source": "market"
+        },
+        {
+          "amount": "8 oz",
+          "item": "mushrooms, halved",
+          "source": "market"
+        },
+        {
+          "amount": "1 can",
+          "item": "white beans in tomato sauce (or good baked beans)",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 slices",
+          "item": "brown bread or sourdough, toasted",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, black pepper, strong tea",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Warm the beans in a small pot on the back burner.",
@@ -999,7 +2362,10 @@
       ],
       "marketTip": "In August, use real market tomatoes and this breakfast levels up dramatically. The rest of the year, halved cherry tomatoes blistered in the pan beat sad winter slicers.",
       "pvfNote": "Irish bacon is cut from the loin, like Canadian bacon but with the fat cap left on — brined and smoked at Timberline from our pasture-raised, corn-and-soy-free pigs. That fat cap is the whole point. Don't trim it.",
-      "tags": ["kid-friendly", "party"]
+      "tags": [
+        "kid-friendly",
+        "party"
+      ]
     },
     {
       "id": "jowl-bacon-carbonara",
@@ -1007,21 +2373,65 @@
       "tagline": "Jowl is what Roman carbonara actually calls for — crisp cubes, orange-yolk eggs, pecorino, no cream, no apologies.",
       "mealType": "weeknight",
       "cuisine": "italian",
-      "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "20 min",
       "totalTime": "30 min",
       "totalMinutes": 30,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["jowl-bacon", "chicken-eggs"],
+      "farmProducts": [
+        "jowl-bacon",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "8 oz", "item": "jowl bacon, cut in 1/4-inch batons", "source": "pvf", "slug": "jowl-bacon" },
-        { "amount": "3", "item": "eggs plus 2 extra yolks", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "1 lb", "item": "spaghetti or rigatoni", "source": "pantry" },
-        { "amount": "1 cup", "item": "finely grated pecorino romano, plus more to serve", "source": "pantry" },
-        { "amount": "2 tsp", "item": "coarsely ground black pepper", "source": "pantry" },
-        { "amount": "", "item": "salt for the pasta water", "source": "pantry" }
+        {
+          "amount": "8 oz",
+          "item": "jowl bacon, cut in 1/4-inch batons",
+          "source": "pvf",
+          "slug": "jowl-bacon",
+          "lb": 0.5
+        },
+        {
+          "amount": "3",
+          "item": "eggs plus 2 extra yolks",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 5
+        },
+        {
+          "amount": "1 lb",
+          "item": "spaghetti or rigatoni",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 cup",
+          "item": "finely grated pecorino romano, plus more to serve",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tsp",
+          "item": "coarsely ground black pepper",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt for the pasta water",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Whisk the eggs, yolks, cheese, and pepper in a big serving bowl until it looks like wet sand.",
@@ -1033,7 +2443,10 @@
       ],
       "marketTip": "Nothing to buy at the market for this one — which is exactly why it's the dinner for the first week of March when the stands are thin and you need something glorious from the pantry and freezer.",
       "pvfNote": "Jowl bacon is our answer to guanciale — the cheek, cured and smoked at Timberline, from pasture-raised, corn-and-soy-free Idaho Pasture Pigs. It renders softer and richer than belly bacon, and with yolks this orange the sauce comes out gold.",
-      "tags": ["quick", "date-night"]
+      "tags": [
+        "quick",
+        "date-night"
+      ]
     },
     {
       "id": "pork-belly-ramen",
@@ -1041,24 +2454,78 @@
       "tagline": "A lazy Sunday broth from real pork bones, crowned with seared belly and a soft egg — takeout can't touch it.",
       "mealType": "soup-stew",
       "cuisine": "asian",
-      "months": [1, 2, 3, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
       "prepTime": "20 min",
       "cookTime": "4 hr",
       "totalTime": "4 hr 20 min",
       "totalMinutes": 260,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["pasture-raised-pork-bones", "pork-belly-sliced", "chicken-eggs"],
+      "farmProducts": [
+        "pasture-raised-pork-bones",
+        "pork-belly-sliced",
+        "chicken-eggs"
+      ],
       "ingredients": [
-        { "amount": "3 lbs", "item": "pork bones", "source": "pvf", "slug": "pasture-raised-pork-bones" },
-        { "amount": "1.5 lbs", "item": "pork belly slab", "source": "pvf", "slug": "pork-belly-sliced" },
-        { "amount": "4", "item": "eggs", "source": "pvf", "slug": "chicken-eggs" },
-        { "amount": "1 bunch", "item": "scallions, sliced", "source": "market" },
-        { "amount": "2", "item": "carrots, shaved thin", "source": "market" },
-        { "amount": "1 head", "item": "garlic, halved, plus a knob of ginger", "source": "pantry" },
-        { "amount": "4 portions", "item": "ramen noodles", "source": "pantry" },
-        { "amount": "1/4 cup", "item": "soy sauce or tamari, plus 1 tbsp miso if you have it", "source": "pantry" },
-        { "amount": "", "item": "salt, chili crisp", "source": "pantry" }
+        {
+          "amount": "3 lbs",
+          "item": "pork bones",
+          "source": "pvf",
+          "slug": "pasture-raised-pork-bones",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "1.5 lbs",
+          "item": "pork belly slab",
+          "source": "pvf",
+          "slug": "pork-belly-sliced",
+          "lb": 1.5
+        },
+        {
+          "amount": "4",
+          "item": "eggs",
+          "source": "pvf",
+          "slug": "chicken-eggs",
+          "count": 4
+        },
+        {
+          "amount": "1 bunch",
+          "item": "scallions, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "carrots, shaved thin",
+          "source": "market"
+        },
+        {
+          "amount": "1 head",
+          "item": "garlic, halved, plus a knob of ginger",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 portions",
+          "item": "ramen noodles",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/4 cup",
+          "item": "soy sauce or tamari, plus 1 tbsp miso if you have it",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, chili crisp",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Roast the bones at 425°F for 30 minutes, then simmer them in a big pot of water with the garlic and ginger, partly covered, for 3 to 4 hours. Top up water as needed. You want 2 quarts of rich broth.",
@@ -1070,7 +2537,11 @@
       ],
       "marketTip": "Winter carrots and storage scallions cover the vegetable end; this is a January project meal for the week the Rochester market is more root cellar than salad bar.",
       "pvfNote": "Bones from pasture-raised, corn-and-soy-free pigs make broth that sets solid in the fridge — that's the collagen. At $3.25 a pound they're the best-kept secret on the price list, and the belly is where an Idaho Pasture Pig shows off its clean, sweet fat.",
-      "tags": ["make-ahead", "project", "date-night"]
+      "tags": [
+        "make-ahead",
+        "project",
+        "date-night"
+      ]
     },
     {
       "id": "backyard-hot-dog-night",
@@ -1078,22 +2549,60 @@
       "tagline": "Uncured pork dogs with snap, charred over real fire, and a topping bar that ends the ketchup argument peacefully.",
       "mealType": "cookout",
       "cuisine": "farmhouse",
-      "months": [5, 6, 7, 8, 9],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "prepTime": "15 min",
       "cookTime": "10 min",
       "totalTime": "25 min",
       "totalMinutes": 25,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["uncured-pork-hot-dogs"],
+      "farmProducts": [
+        "uncured-pork-hot-dogs"
+      ],
       "ingredients": [
-        { "amount": "2 lbs", "item": "uncured pork hot dogs", "source": "pvf", "slug": "uncured-pork-hot-dogs" },
-        { "amount": "1", "item": "sweet onion, diced fine", "source": "market" },
-        { "amount": "2", "item": "cucumbers, quick-pickled (sliced thin + vinegar + salt + 20 minutes)", "source": "market" },
-        { "amount": "1 pint", "item": "cherry tomatoes, chopped with a little jalapeño (summer relish)", "source": "market" },
-        { "amount": "8", "item": "good buns, buttered", "source": "pantry" },
-        { "amount": "", "item": "mustard (several), shredded cheddar, chili if you're ambitious", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "2 lbs",
+          "item": "uncured pork hot dogs",
+          "source": "pvf",
+          "slug": "uncured-pork-hot-dogs",
+          "lb": 2
+        },
+        {
+          "amount": "1",
+          "item": "sweet onion, diced fine",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "cucumbers, quick-pickled (sliced thin + vinegar + salt + 20 minutes)",
+          "source": "market"
+        },
+        {
+          "amount": "1 pint",
+          "item": "cherry tomatoes, chopped with a little jalapeño (summer relish)",
+          "source": "market"
+        },
+        {
+          "amount": "8",
+          "item": "good buns, buttered",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "mustard (several), shredded cheddar, chili if you're ambitious",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Make the quick pickles and the tomato relish first; they get better while you grill.",
@@ -1104,7 +2613,12 @@
       ],
       "marketTip": "July and August hand you the whole topping bar — sweet onions, cucumbers for quick pickles, and tomatoes for relish, all from one pass through the Brighton market.",
       "pvfNote": "These are whole-muscle pork dogs in natural casings, no nitrates or nitrites added, made at Timberline from our pasture-raised, corn-and-soy-free pigs. Read the ingredient list on a grocery pack of dogs sometime — then read ours.",
-      "tags": ["grill", "kid-friendly", "party", "quick"]
+      "tags": [
+        "grill",
+        "kid-friendly",
+        "party",
+        "quick"
+      ]
     },
     {
       "id": "grilled-spatchcock-turkey",
@@ -1112,21 +2626,54 @@
       "tagline": "The whole holiday bird, flat on the grill, done in under two hours with smoke the oven can't fake — and the oven stays free for pies.",
       "mealType": "special",
       "cuisine": "farmhouse",
-      "months": [10, 11, 12],
+      "months": [
+        10,
+        11,
+        12
+      ],
       "prepTime": "20 min",
       "cookTime": "1 hr 45 min",
       "totalTime": "2 hr 5 min",
       "totalMinutes": 125,
       "servings": 8,
       "difficulty": "Medium",
-      "farmProducts": ["spatchcock-turkey"],
+      "farmProducts": [
+        "spatchcock-turkey"
+      ],
       "ingredients": [
-        { "amount": "1 (12-14 lb)", "item": "spatchcock turkey", "source": "pvf", "slug": "spatchcock-turkey" },
-        { "amount": "1/4 cup", "item": "kosher salt (for the dry brine)", "source": "pantry" },
-        { "amount": "4 tbsp", "item": "butter, melted, with chopped sage and thyme", "source": "market" },
-        { "amount": "2 tbsp", "item": "black pepper and paprika, mixed", "source": "pantry" },
-        { "amount": "2", "item": "lemons, halved", "source": "pantry" },
-        { "amount": "", "item": "hardwood chunks or chips if you have them", "source": "pantry" }
+        {
+          "amount": "1 (12-14 lb)",
+          "item": "spatchcock turkey",
+          "source": "pvf",
+          "slug": "spatchcock-turkey",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "1/4 cup",
+          "item": "kosher salt (for the dry brine)",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 tbsp",
+          "item": "butter, melted, with chopped sage and thyme",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "black pepper and paprika, mixed",
+          "source": "pantry"
+        },
+        {
+          "amount": "2",
+          "item": "lemons, halved",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "hardwood chunks or chips if you have them",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "One to two days ahead: pat the bird dry and salt it everywhere, including under the skin on the breast. Leave it uncovered in the fridge — this is the whole secret to juicy and crisp.",
@@ -1138,7 +2685,12 @@
       ],
       "marketTip": "November markets still have fresh sage and thyme — grab Brussels sprouts and sweet potatoes for the oven space you just liberated.",
       "pvfNote": "Our seasonal turkeys range the same Genesee Valley pasture as the chickens, on a corn-and-soy-free ration, and we spatchcock them at HLW Acres so the hard part's done. A flat bird cooks evenly in half the time — no more gray breast waiting on pink thighs.",
-      "tags": ["grill", "holiday", "gluten-free", "party"]
+      "tags": [
+        "grill",
+        "holiday",
+        "gluten-free",
+        "party"
+      ]
     },
     {
       "id": "ground-turkey-chili",
@@ -1146,24 +2698,72 @@
       "tagline": "A big honest pot of chili that simmers while the game's on — and somehow better the second day.",
       "mealType": "soup-stew",
       "cuisine": "farmhouse",
-      "months": [1, 2, 3, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "1 hr 15 min",
       "totalTime": "1 hr 30 min",
       "totalMinutes": 90,
       "servings": 6,
       "difficulty": "Easy",
-      "farmProducts": ["turkey-ground"],
+      "farmProducts": [
+        "turkey-ground"
+      ],
       "ingredients": [
-        { "amount": "2 lbs", "item": "ground turkey", "source": "pvf", "slug": "turkey-ground" },
-        { "amount": "1", "item": "onion, diced", "source": "market" },
-        { "amount": "2", "item": "peppers, diced (late-summer market peppers if you froze some)", "source": "market" },
-        { "amount": "2 cans (14 oz)", "item": "crushed tomatoes", "source": "pantry" },
-        { "amount": "2 cans", "item": "beans (kidney, pinto, or both), drained", "source": "pantry" },
-        { "amount": "3 tbsp", "item": "chili powder, plus 1 tbsp cumin and 1 tsp smoked paprika", "source": "pantry" },
-        { "amount": "4 cloves", "item": "garlic, minced", "source": "pantry" },
-        { "amount": "1 cup", "item": "stock", "source": "pantry" },
-        { "amount": "", "item": "salt; cheddar, sour cream, scallions to serve", "source": "pantry" }
+        {
+          "amount": "2 lbs",
+          "item": "ground turkey",
+          "source": "pvf",
+          "slug": "turkey-ground",
+          "lb": 2
+        },
+        {
+          "amount": "1",
+          "item": "onion, diced",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "peppers, diced (late-summer market peppers if you froze some)",
+          "source": "market"
+        },
+        {
+          "amount": "2 cans (14 oz)",
+          "item": "crushed tomatoes",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 cans",
+          "item": "beans (kidney, pinto, or both), drained",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "chili powder, plus 1 tbsp cumin and 1 tsp smoked paprika",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 cloves",
+          "item": "garlic, minced",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 cup",
+          "item": "stock",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt; cheddar, sour cream, scallions to serve",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Get a Dutch oven hot with a little fat. Brown the turkey hard in two batches, pressing it flat and leaving it alone so it crusts — pale turkey makes pale chili. Set aside.",
@@ -1174,7 +2774,13 @@
       ],
       "marketTip": "September peppers from the market, diced and frozen flat in a bag, are the trick — you'll cook out of that bag all winter.",
       "pvfNote": "Ground turkey from a pastured, corn-and-soy-free bird is a whole different ingredient than the pale tubes at the grocery store — it browns like beef and holds its own against three tablespoons of chili powder.",
-      "tags": ["one-pot", "make-ahead", "kid-friendly", "gluten-free", "party"]
+      "tags": [
+        "one-pot",
+        "make-ahead",
+        "kid-friendly",
+        "gluten-free",
+        "party"
+      ]
     },
     {
       "id": "turkey-stock-day-after-soup",
@@ -1182,24 +2788,73 @@
       "tagline": "Necks and bones become two quarts of liquid gold, then the soup that outshines the feast that made it.",
       "mealType": "soup-stew",
       "cuisine": "farmhouse",
-      "months": [1, 2, 11, 12],
+      "months": [
+        1,
+        2,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "3 hr 30 min",
       "totalTime": "3 hr 45 min",
       "totalMinutes": 225,
       "servings": 6,
       "difficulty": "Easy",
-      "farmProducts": ["turkey-stock-bag", "turkey-necks"],
+      "farmProducts": [
+        "turkey-stock-bag",
+        "turkey-necks"
+      ],
       "ingredients": [
-        { "amount": "1 bag", "item": "turkey stock bag (backs and bones)", "source": "pvf", "slug": "turkey-stock-bag" },
-        { "amount": "2 lbs", "item": "turkey necks", "source": "pvf", "slug": "turkey-necks" },
-        { "amount": "4", "item": "carrots, sliced", "source": "market" },
-        { "amount": "3 stalks", "item": "celery or 1 cup diced celeriac", "source": "market" },
-        { "amount": "2", "item": "onions", "source": "market" },
-        { "amount": "1 handful", "item": "fresh parsley and dill", "source": "market" },
-        { "amount": "1 cup", "item": "egg noodles, rice, or wild rice", "source": "pantry" },
-        { "amount": "2", "item": "bay leaves, plus a teaspoon of peppercorns", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "1 bag",
+          "item": "turkey stock bag (backs and bones)",
+          "source": "pvf",
+          "slug": "turkey-stock-bag",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "2 lbs",
+          "item": "turkey necks",
+          "source": "pvf",
+          "slug": "turkey-necks",
+          "lb": 2
+        },
+        {
+          "amount": "4",
+          "item": "carrots, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "3 stalks",
+          "item": "celery or 1 cup diced celeriac",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "onions",
+          "source": "market"
+        },
+        {
+          "amount": "1 handful",
+          "item": "fresh parsley and dill",
+          "source": "market"
+        },
+        {
+          "amount": "1 cup",
+          "item": "egg noodles, rice, or wild rice",
+          "source": "pantry"
+        },
+        {
+          "amount": "2",
+          "item": "bay leaves, plus a teaspoon of peppercorns",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Roast the stock-bag bones and necks at 425°F for 30 minutes, until browned — this is the difference between stock and dishwater.",
@@ -1211,7 +2866,11 @@
       ],
       "marketTip": "Celeriac from the winter markets does celery's job with twice the flavor and keeps for months in the crisper — buy one whenever you see it.",
       "pvfNote": "Bones and necks from pastured, corn-and-soy-free turkeys make stock that gels like it's supposed to. A stock bag and a pack of necks cost less than two boxes of the cartoned stuff and taste like actual turkey.",
-      "tags": ["make-ahead", "budget", "one-pot"]
+      "tags": [
+        "make-ahead",
+        "budget",
+        "one-pot"
+      ]
     },
     {
       "id": "turkey-thighs-cacciatore",
@@ -1219,23 +2878,66 @@
       "tagline": "Hunter's-style braise — turkey thighs, tomatoes, peppers, and mushrooms — over polenta on a cold night.",
       "mealType": "sunday-dinner",
       "cuisine": "italian",
-      "months": [1, 2, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "15 min",
       "cookTime": "1 hr 30 min",
       "totalTime": "1 hr 45 min",
       "totalMinutes": 105,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["turkey-thighs"],
+      "farmProducts": [
+        "turkey-thighs"
+      ],
       "ingredients": [
-        { "amount": "3 lbs", "item": "turkey thighs", "source": "pvf", "slug": "turkey-thighs" },
-        { "amount": "8 oz", "item": "mushrooms, quartered", "source": "market" },
-        { "amount": "2", "item": "peppers, sliced", "source": "market" },
-        { "amount": "1", "item": "onion, sliced", "source": "market" },
-        { "amount": "1 can (28 oz)", "item": "crushed tomatoes", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "dry white wine or stock", "source": "pantry" },
-        { "amount": "4 cloves", "item": "garlic, sliced, plus 1 tsp dried oregano and a rosemary sprig", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, olive oil; polenta or crusty bread to serve", "source": "pantry" }
+        {
+          "amount": "2-3 lbs",
+          "item": "turkey thighs",
+          "source": "pvf",
+          "slug": "turkey-thighs",
+          "lb": 2.25
+        },
+        {
+          "amount": "8 oz",
+          "item": "mushrooms, quartered",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "peppers, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "onion, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1 can (28 oz)",
+          "item": "crushed tomatoes",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "dry white wine or stock",
+          "source": "pantry"
+        },
+        {
+          "amount": "4 cloves",
+          "item": "garlic, sliced, plus 1 tsp dried oregano and a rosemary sprig",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, olive oil; polenta or crusty bread to serve",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 325°F. Season the thighs and brown them skin-side down in olive oil in a Dutch oven, about 6 minutes. Set aside.",
@@ -1247,7 +2949,11 @@
       ],
       "marketTip": "September is the sweet spot — the last field peppers overlap with local mushrooms at the WNY markets. The rest of the winter, storage onions and cremini carry it fine.",
       "pvfNote": "A turkey thigh is the most underrated braising meat we sell — dark, rich, and built for tomatoes. Pastured, corn-and-soy-free birds have thighs that hold together through a long braise instead of shredding into string.",
-      "tags": ["one-pot", "make-ahead", "gluten-free"]
+      "tags": [
+        "one-pot",
+        "make-ahead",
+        "gluten-free"
+      ]
     },
     {
       "id": "oven-bbq-turkey-wings",
@@ -1255,22 +2961,61 @@
       "tagline": "Chicken wings' bigger, meatier cousins — braised tender, then lacquered under the broiler for game day.",
       "mealType": "cookout",
       "cuisine": "farmhouse",
-      "months": [1, 2, 9, 10, 11, 12],
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
       "prepTime": "10 min",
       "cookTime": "2 hr",
       "totalTime": "2 hr 10 min",
       "totalMinutes": 130,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["turkey-wings"],
+      "farmProducts": [
+        "turkey-wings"
+      ],
       "ingredients": [
-        { "amount": "3 lbs", "item": "turkey wings, split at the joints", "source": "pvf", "slug": "turkey-wings" },
-        { "amount": "1", "item": "onion, sliced", "source": "market" },
-        { "amount": "1 cup", "item": "barbecue sauce", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "rub: brown sugar, paprika, garlic powder, salt, pepper", "source": "pantry" },
-        { "amount": "1/2 cup", "item": "stock or water", "source": "pantry" },
-        { "amount": "1 splash", "item": "cider vinegar", "source": "pantry" },
-        { "amount": "", "item": "celery sticks and ranch, if you're doing it right", "source": "pantry" }
+        {
+          "amount": "3 lbs",
+          "item": "turkey wings, split at the joints",
+          "source": "pvf",
+          "slug": "turkey-wings",
+          "lb": 3.5
+        },
+        {
+          "amount": "1",
+          "item": "onion, sliced",
+          "source": "market"
+        },
+        {
+          "amount": "1 cup",
+          "item": "barbecue sauce",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "rub: brown sugar, paprika, garlic powder, salt, pepper",
+          "source": "pantry"
+        },
+        {
+          "amount": "1/2 cup",
+          "item": "stock or water",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 splash",
+          "item": "cider vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "celery sticks and ranch, if you're doing it right",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Heat the oven to 325°F. Coat the wing pieces all over with the rub.",
@@ -1281,7 +3026,12 @@
       ],
       "marketTip": "This is football-season food — nothing to chase at the market except maybe celery from the last fall stands. The wings do the work.",
       "pvfNote": "Wings from turkeys that actually used them — pastured, corn-and-soy-free birds ranging the Genesee Valley — carry real meat, not just skin and hope. Braise-then-broil is the move for any working muscle.",
-      "tags": ["party", "kid-friendly", "make-ahead", "budget"]
+      "tags": [
+        "party",
+        "kid-friendly",
+        "make-ahead",
+        "budget"
+      ]
     },
     {
       "id": "dry-brined-thanksgiving-turkey",
@@ -1289,22 +3039,58 @@
       "tagline": "Salt it Tuesday, roast it Thursday, carve it to silence. The no-drama holiday bird.",
       "mealType": "special",
       "cuisine": "farmhouse",
-      "months": [11, 12],
+      "months": [
+        11,
+        12
+      ],
       "prepTime": "30 min (plus 2 days of brine)",
       "cookTime": "3 hr",
       "totalTime": "3 hr 30 min",
       "totalMinutes": 210,
       "servings": 10,
       "difficulty": "Medium",
-      "farmProducts": ["whole-turkey"],
+      "farmProducts": [
+        "whole-turkey"
+      ],
       "ingredients": [
-        { "amount": "1 (14-16 lb)", "item": "whole turkey", "source": "pvf", "slug": "whole-turkey" },
-        { "amount": "1/3 cup", "item": "kosher salt, mixed with 1 tbsp brown sugar and 1 tbsp black pepper", "source": "pantry" },
-        { "amount": "6 tbsp", "item": "butter, softened", "source": "pantry" },
-        { "amount": "1 bunch", "item": "sage, thyme, and rosemary", "source": "market" },
-        { "amount": "2", "item": "onions, plus 2 carrots and 2 celery stalks, roughly chopped", "source": "market" },
-        { "amount": "1", "item": "lemon, halved", "source": "pantry" },
-        { "amount": "2 cups", "item": "stock (turkey if you made it, chicken if not)", "source": "pantry" }
+        {
+          "amount": "1 (14-16 lb)",
+          "item": "whole turkey",
+          "source": "pvf",
+          "slug": "whole-turkey",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "1/3 cup",
+          "item": "kosher salt, mixed with 1 tbsp brown sugar and 1 tbsp black pepper",
+          "source": "pantry"
+        },
+        {
+          "amount": "6 tbsp",
+          "item": "butter, softened",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "sage, thyme, and rosemary",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "onions, plus 2 carrots and 2 celery stalks, roughly chopped",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "lemon, halved",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 cups",
+          "item": "stock (turkey if you made it, chicken if not)",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Two days out: pat the bird bone-dry and rub the salt mix everywhere — heaviest on the breast, some inside. Fridge, uncovered, on a rack. Don't rinse it later; just pat dry.",
@@ -1316,7 +3102,12 @@
       ],
       "marketTip": "The November markets have the herbs, the roasting vegetables, and the last of the good storage apples for the table. Order the bird well ahead — our turkeys are seasonal and the count is fixed months before Thanksgiving.",
       "pvfNote": "A pastured, corn-and-soy-free turkey that ranged the Genesee Valley all fall doesn't need brining bags, injections, or a deep fryer to taste like something. Salt, time, and butter. The bird was the hard part, and it's already done.",
-      "tags": ["holiday", "gluten-free", "party", "make-ahead"]
+      "tags": [
+        "holiday",
+        "gluten-free",
+        "party",
+        "make-ahead"
+      ]
     },
     {
       "id": "roast-half-leg-of-lamb",
@@ -1324,35 +3115,81 @@
       "tagline": "The Easter table centerpiece — a half leg studded with garlic, roasted blushing pink over potatoes.",
       "mealType": "special",
       "cuisine": "mediterranean",
-      "months": [3, 4, 5, 12],
+      "months": [
+        3,
+        4,
+        5,
+        12
+      ],
       "prepTime": "20 min",
       "cookTime": "1 hr 15 min",
       "totalTime": "1 hr 35 min",
       "totalMinutes": 95,
-      "servings": 6,
+      "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["lamb-leg-roast"],
+      "farmProducts": [
+        "lamb-leg-roast"
+      ],
       "ingredients": [
-        { "amount": "1 (3-4 lb)", "item": "half leg of lamb, bone-in", "source": "pvf", "slug": "lamb-leg-roast" },
-        { "amount": "2 lbs", "item": "potatoes, in thick slices", "source": "market" },
-        { "amount": "8 cloves", "item": "garlic — half slivered, half smashed", "source": "pantry" },
-        { "amount": "3 sprigs", "item": "rosemary, plus a small bunch of mint for serving", "source": "market" },
-        { "amount": "3 tbsp", "item": "olive oil", "source": "pantry" },
-        { "amount": "1", "item": "lemon", "source": "pantry" },
-        { "amount": "1 cup", "item": "stock or white wine", "source": "pantry" },
-        { "amount": "", "item": "salt and black pepper", "source": "pantry" }
+        {
+          "amount": "1 (about 2 lb)",
+          "item": "half leg of lamb, bone-in",
+          "source": "pvf",
+          "slug": "lamb-leg-roast",
+          "packs": 1,
+          "fixed": true
+        },
+        {
+          "amount": "2 lbs",
+          "item": "potatoes, in thick slices",
+          "source": "market"
+        },
+        {
+          "amount": "8 cloves",
+          "item": "garlic — half slivered, half smashed",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 sprigs",
+          "item": "rosemary, plus a small bunch of mint for serving",
+          "source": "market"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "olive oil",
+          "source": "pantry"
+        },
+        {
+          "amount": "1",
+          "item": "lemon",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 cup",
+          "item": "stock or white wine",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt and black pepper",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Salt the leg generously the night before if you can. Bring it to room temperature before roasting.",
         "Heat the oven to 450°F. Cut small slits all over the leg and tuck a garlic sliver and a few rosemary needles into each. Rub with olive oil and pepper.",
         "Layer the potatoes, smashed garlic, and remaining rosemary in the pan, pour in the stock, and set the lamb on top — the potatoes roast in lamb drippings, which is the second-best part of this recipe.",
-        "Roast 20 minutes at 450°F, then drop to 350°F and roast 50 to 65 minutes more, until the center reads 130°F for rosy medium-rare (grass-fed lamb is best short of medium).",
+        "Roast 20 minutes at 450°F, then drop to 350°F and roast 40 to 55 minutes more, until the center reads 130°F for rosy medium-rare (grass-fed lamb is best short of medium).",
         "Rest 20 minutes under foil. Squeeze the lemon over, shower with torn mint, and carve parallel to the bone.",
         "Spoon the potatoes and pan juices alongside. Cold leftover lamb on toast with mustard is a private reward the next day."
       ],
       "marketTip": "For Easter, April markets have greenhouse mint and the last great storage potatoes; in May, asparagus alongside makes it a proper spring plate.",
       "pvfNote": "Our Katahdin and White Dorper lambs stay with their mothers until weaning and finish entirely on Genesee Valley pasture — no grain, ever. Hair-sheep lamb is mild and clean, so a leg roast tastes sweet and grassy, never gamey. New batch usually lands in August; spoken for fast.",
-      "tags": ["holiday", "gluten-free", "date-night"]
+      "tags": [
+        "holiday",
+        "gluten-free",
+        "date-night"
+      ]
     },
     {
       "id": "lamb-burgers-tzatziki",
@@ -1360,23 +3197,65 @@
       "tagline": "Char outside, pink inside, cold garlicky tzatziki on top — the burger your cookout didn't know it was missing.",
       "mealType": "cookout",
       "cuisine": "mediterranean",
-      "months": [5, 6, 7, 8, 9],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "prepTime": "15 min",
       "cookTime": "10 min",
       "totalTime": "25 min",
       "totalMinutes": 25,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["lamb-ground"],
+      "farmProducts": [
+        "lamb-ground"
+      ],
       "ingredients": [
-        { "amount": "1.5 lbs", "item": "ground lamb", "source": "pvf", "slug": "lamb-ground" },
-        { "amount": "1", "item": "cucumber, grated and squeezed dry", "source": "market" },
-        { "amount": "2", "item": "tomatoes, thick-sliced, and a handful of arugula", "source": "market" },
-        { "amount": "1 cup", "item": "full-fat Greek yogurt", "source": "pantry" },
-        { "amount": "2 cloves", "item": "garlic — one grated into the yogurt, one into the meat", "source": "pantry" },
-        { "amount": "1 tsp", "item": "cumin, plus 1 tsp dried oregano", "source": "pantry" },
-        { "amount": "4", "item": "sturdy buns or pitas", "source": "pantry" },
-        { "amount": "", "item": "salt, pepper, olive oil, a squeeze of lemon", "source": "pantry" }
+        {
+          "amount": "1.5 lbs",
+          "item": "ground lamb",
+          "source": "pvf",
+          "slug": "lamb-ground",
+          "lb": 1.5
+        },
+        {
+          "amount": "1",
+          "item": "cucumber, grated and squeezed dry",
+          "source": "market"
+        },
+        {
+          "amount": "2",
+          "item": "tomatoes, thick-sliced, and a handful of arugula",
+          "source": "market"
+        },
+        {
+          "amount": "1 cup",
+          "item": "full-fat Greek yogurt",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 cloves",
+          "item": "garlic — one grated into the yogurt, one into the meat",
+          "source": "pantry"
+        },
+        {
+          "amount": "1 tsp",
+          "item": "cumin, plus 1 tsp dried oregano",
+          "source": "pantry"
+        },
+        {
+          "amount": "4",
+          "item": "sturdy buns or pitas",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt, pepper, olive oil, a squeeze of lemon",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Stir the tzatziki: yogurt, grated cucumber, garlic, lemon, olive oil, salt. Fridge it — it improves by the minute.",
@@ -1387,7 +3266,11 @@
       ],
       "marketTip": "Market cucumbers in July squeeze out half the water of grocery ones, which is exactly what tzatziki wants — and this is peak tomato-slab season anyway.",
       "pvfNote": "Ground lamb from our grass-fed Katahdin and White Dorper flock is the gateway lamb — mild enough for skeptics, rich enough to make beef burgers seem shy. When it's sold out between batches, that's the honest cost of a small flock.",
-      "tags": ["grill", "quick", "party"]
+      "tags": [
+        "grill",
+        "quick",
+        "party"
+      ]
     },
     {
       "id": "rosemary-lamb-rib-chops",
@@ -1395,22 +3278,60 @@
       "tagline": "Two-bite chops seared hard in rosemary butter — the fanciest fifteen minutes in this whole library.",
       "mealType": "special",
       "cuisine": "mediterranean",
-      "months": [4, 5, 6, 9, 10],
+      "months": [
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
       "prepTime": "10 min",
       "cookTime": "8 min",
       "totalTime": "18 min",
       "totalMinutes": 18,
       "servings": 4,
       "difficulty": "Medium",
-      "farmProducts": ["lamb-rib-chops"],
+      "farmProducts": [
+        "lamb-rib-chops"
+      ],
       "ingredients": [
-        { "amount": "8-10", "item": "lamb rib chops", "source": "pvf", "slug": "lamb-rib-chops" },
-        { "amount": "4 cups", "item": "arugula or baby greens", "source": "market" },
-        { "amount": "3 tbsp", "item": "butter", "source": "pantry" },
-        { "amount": "3 cloves", "item": "garlic, smashed", "source": "pantry" },
-        { "amount": "3 sprigs", "item": "rosemary", "source": "market" },
-        { "amount": "1", "item": "lemon", "source": "pantry" },
-        { "amount": "", "item": "flaky salt, black pepper, olive oil", "source": "pantry" }
+        {
+          "amount": "8-10",
+          "item": "lamb rib chops",
+          "source": "pvf",
+          "slug": "lamb-rib-chops",
+          "lb": 2
+        },
+        {
+          "amount": "4 cups",
+          "item": "arugula or baby greens",
+          "source": "market"
+        },
+        {
+          "amount": "3 tbsp",
+          "item": "butter",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 cloves",
+          "item": "garlic, smashed",
+          "source": "pantry"
+        },
+        {
+          "amount": "3 sprigs",
+          "item": "rosemary",
+          "source": "market"
+        },
+        {
+          "amount": "1",
+          "item": "lemon",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "flaky salt, black pepper, olive oil",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Bring the chops to room temperature and season both sides well. Get a heavy skillet properly hot.",
@@ -1422,7 +3343,11 @@
       ],
       "marketTip": "Spring and early-fall markets have the tender greens this wants; the rosemary keeps on a windowsill all year. Nothing else to buy — spend the savings on the chops.",
       "pvfNote": "Rib chops are the rack of lamb, cut into lollipops — the most tender bite on a grass-fed Katahdin/White Dorper lamb that never ate grain. There are only sixteen per animal, which is why they come and go from the store.",
-      "tags": ["quick", "date-night", "gluten-free"]
+      "tags": [
+        "quick",
+        "date-night",
+        "gluten-free"
+      ]
     },
     {
       "id": "grilled-pork-shoulder-steaks",
@@ -1430,22 +3355,60 @@
       "tagline": "The pork steak — marbled like ribeye, priced like Tuesday — grilled over fire the way St. Louis has always known.",
       "mealType": "cookout",
       "cuisine": "farmhouse",
-      "months": [5, 6, 7, 8, 9],
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
       "prepTime": "10 min",
       "cookTime": "20 min",
       "totalTime": "30 min",
       "totalMinutes": 30,
       "servings": 4,
       "difficulty": "Easy",
-      "farmProducts": ["shoulder-steaks"],
+      "farmProducts": [
+        "shoulder-steaks"
+      ],
       "ingredients": [
-        { "amount": "4", "item": "pork shoulder steaks, about 3/4 inch thick", "source": "pvf", "slug": "shoulder-steaks" },
-        { "amount": "4 ears", "item": "sweet corn, shucked", "source": "market" },
-        { "amount": "1 pint", "item": "cherry tomatoes, halved", "source": "market" },
-        { "amount": "1 bunch", "item": "scallions and basil", "source": "market" },
-        { "amount": "2 tbsp", "item": "rub: brown sugar, paprika, garlic powder, salt, pepper", "source": "pantry" },
-        { "amount": "2 tbsp", "item": "olive oil and a splash of red wine vinegar", "source": "pantry" },
-        { "amount": "", "item": "salt", "source": "pantry" }
+        {
+          "amount": "4",
+          "item": "pork shoulder steaks, about 3/4 inch thick",
+          "source": "pvf",
+          "slug": "shoulder-steaks",
+          "lb": 2.6
+        },
+        {
+          "amount": "4 ears",
+          "item": "sweet corn, shucked",
+          "source": "market"
+        },
+        {
+          "amount": "1 pint",
+          "item": "cherry tomatoes, halved",
+          "source": "market"
+        },
+        {
+          "amount": "1 bunch",
+          "item": "scallions and basil",
+          "source": "market"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "rub: brown sugar, paprika, garlic powder, salt, pepper",
+          "source": "pantry"
+        },
+        {
+          "amount": "2 tbsp",
+          "item": "olive oil and a splash of red wine vinegar",
+          "source": "pantry"
+        },
+        {
+          "amount": "",
+          "item": "salt",
+          "source": "pantry"
+        }
       ],
       "instructions": [
         "Coat the steaks with the rub and let them sit while the grill heats — two zones, one hot, one medium.",
@@ -1456,7 +3419,12 @@
       ],
       "marketTip": "Peak sweet corn and cherry tomatoes hit WNY markets together from mid-July — this salad is the whole late-summer market in one bowl.",
       "pvfNote": "Shoulder steaks are cut across the butt roast, so they carry all its marbling in a grillable slice — from Idaho Pasture Pigs raised outside on a corn-and-soy-free ration. The Midwest never let this cut go; we shouldn't have either.",
-      "tags": ["grill", "budget", "gluten-free", "party"]
+      "tags": [
+        "grill",
+        "budget",
+        "gluten-free",
+        "party"
+      ]
     }
   ]
 }

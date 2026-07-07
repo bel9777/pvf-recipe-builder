@@ -41,6 +41,7 @@ const state = {
   selectedSlugs: new Set(),
   month: new Date().getMonth() + 1, // 1-12
   openId: null,
+  servingsFor: {}, // recipe id -> chosen servings (default: recipe.servings)
 };
 
 let recipes = [];
@@ -250,6 +251,91 @@ function countLineText(shown) {
   return `${shown} recipe${shown === 1 ? "" : "s"}. In-season picks first.`;
 }
 
+/* ── servings scaling & package math ──────────────── */
+
+const EGGS_PER_PACK = 12; // eggs sell by the dozen
+// Stretch tolerance before another package is added: recipes flex, and a
+// whole bird carves a lot thinner before you truly need a second one.
+const STRETCH = 0.15;
+const STRETCH_FIXED = 0.35;
+
+function servingsOf(r) {
+  return state.servingsFor[r.id] || r.servings;
+}
+
+const FRACTION_GLYPHS = [[0.25, "¼"], [0.33, "⅓"], [0.5, "½"], [0.67, "⅔"], [0.75, "¾"]];
+
+function fmtQty(n) {
+  const whole = Math.floor(n + 0.02);
+  const frac = n - whole;
+  let sym = "", best = 0.13;
+  for (const [v, g] of FRACTION_GLYPHS) {
+    if (Math.abs(frac - v) < best) { best = Math.abs(frac - v); sym = g; }
+  }
+  if (!sym && frac > 0.87) return String(whole + 1);
+  if (!sym && frac > 0.13) return String(Math.round(n * 10) / 10);
+  if (!whole) return sym || "0";
+  return sym ? `${whole} ${sym}` : String(whole);
+}
+
+function parseLeadingQty(str) {
+  let m = str.match(/^(\d+)\s+(\d+)\/(\d+)/);
+  if (m) return { n: +m[1] + m[2] / m[3], len: m[0].length };
+  m = str.match(/^(\d+)\/(\d+)/);
+  if (m) return { n: m[1] / m[2], len: m[0].length };
+  m = str.match(/^\d+(\.\d+)?/);
+  if (m) return { n: parseFloat(m[0]), len: m[0].length };
+  return null;
+}
+
+function scaleAmount(amount, factor) {
+  if (!amount || factor === 1) return amount;
+  const lead = parseLeadingQty(amount);
+  if (!lead) return amount;
+  let rest = amount.slice(lead.len);
+  // range like "2-3 lbs" / "3–4 lbs": scale both ends
+  const range = rest.match(/^\s*[–-]\s*(\d+(\.\d+)?)/);
+  if (range) {
+    rest = rest.slice(range[0].length);
+    return `${fmtQty(lead.n * factor)}–${fmtQty(parseFloat(range[1]) * factor)}${rest}`;
+  }
+  return `${fmtQty(lead.n * factor)}${rest}`;
+}
+
+/* Shopping math: how many store packages each farm ingredient needs at
+   the chosen servings. Package sizes come live from the store scrape
+   (avg_weight_lb); structured needs (lb / count / packs) live on each
+   pvf ingredient in recipes.json. */
+function farmOrderLines(r) {
+  const factor = servingsOf(r) / r.servings;
+  return r.ingredients.filter((i) => i.source === "pvf" && i.slug).map((i) => {
+    const p = inventory?.[i.slug];
+    let packs = null;
+    if (i.packs) {
+      packs = Math.max(1, Math.ceil(i.packs * factor - STRETCH_FIXED));
+    } else if (i.count) {
+      packs = Math.max(1, Math.ceil((i.count * factor) / EGGS_PER_PACK - STRETCH));
+    } else if (i.lb && p?.avg_weight_lb) {
+      packs = Math.max(1, Math.ceil((i.lb * factor) / p.avg_weight_lb - STRETCH));
+    }
+    const price = p && packs != null
+      ? packs * p.price * (p.price_unit === "lb" ? (p.avg_weight_lb || 1) : 1)
+      : null;
+    const rawName = p?.name || titleCase(i.slug.replace(/-/g, " "));
+    return {
+      slug: i.slug,
+      // "...Eggs — Dozen" reads badly mid-sentence; the qty already says dozen.
+      name: rawName.replace(/\s*[—–-]+\s*Dozen$/i, ""),
+      inStock: p ? p.in_stock : true,
+      known: !!p,
+      url: p?.url || `https://parkviewfamilyfarm.com/store/product/${i.slug}`,
+      packs, price,
+      packNote: i.count ? "dozen" : (p?.avg_weight_lb ? `about ${p.avg_weight_lb} lb each` : null),
+      fixed: !!i.fixed,
+    };
+  });
+}
+
 /* ── recipe rendering ─────────────────────────────── */
 
 function renderList() {
@@ -283,6 +369,9 @@ function renderCard(r) {
   const open = state.openId === r.id;
   const farm = farmProductInfo(r);
   const soldOut = farm.filter((f) => f.known && !f.inStock);
+  const servings = servingsOf(r);
+  const factor = servings / r.servings;
+  const hasFixed = r.ingredients.some((i) => i.source === "pvf" && i.fixed);
 
   const groups = [
     { key: "pvf", label: "From Park View Farm", dot: "source-dot-pvf" },
@@ -293,7 +382,7 @@ function renderCard(r) {
     if (!items.length) return "";
     return `<div class="ing-group-label"><span class="source-dot ${dot}"></span>${label}</div>
       <ul class="ing-list">${items.map((i) =>
-        `<li><span class="ing-amount">${escapeHtml(i.amount)}</span><span>${escapeHtml(i.item)}</span></li>`).join("")}</ul>`;
+        `<li><span class="ing-amount">${escapeHtml(scaleAmount(i.amount, factor))}</span><span>${escapeHtml(i.item)}</span></li>`).join("")}</ul>`;
   }).join("");
 
   return `<article class="card recipe-card" data-id="${r.id}">
@@ -311,6 +400,14 @@ function renderCard(r) {
     </button>
     <div class="farm-line">Farm items: <strong>${farm.map((f) => escapeHtml(f.name)).join(", ")}</strong> · serves ${r.servings}</div>
     ${open ? `<div class="recipe-body">
+      <div class="serves-row">
+        <span class="serves-label">Cooking for</span>
+        <button type="button" class="serves-btn" data-serve="-1" aria-label="Fewer servings" ${servings <= 2 ? "disabled" : ""}>&minus;</button>
+        <strong class="serves-count">${servings}</strong>
+        <button type="button" class="serves-btn" data-serve="1" aria-label="More servings" ${servings >= 16 ? "disabled" : ""}>+</button>
+        ${factor !== 1 ? `<span class="serves-note">amounts adjusted from the original ${r.servings}</span>`
+          : (hasFixed ? `<span class="serves-note">built around a whole one — it stretches a long way before you need a second</span>` : "")}
+      </div>
       ${groups}
       <div class="ing-group-label" style="margin-top:18px">How it goes</div>
       <ol class="recipe-steps">${r.instructions.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>
@@ -318,7 +415,7 @@ function renderCard(r) {
       <div class="info-box pvf-note"><span class="info-box-label">From the farm</span>${escapeHtml(r.pvfNote)}</div>
     </div>
     <div class="cart-row">
-      ${cartControls(r, farm)}
+      ${cartControls(r)}
       <span class="action-links">
         <button type="button" class="action-btn" data-print="${r.id}">Print</button>
         <button type="button" class="action-btn" data-share="${r.id}">Share</button>
@@ -328,18 +425,38 @@ function renderCard(r) {
   </article>`;
 }
 
-function cartControls(r, farm) {
-  const inStock = farm.filter((f) => f.inStock);
-  const links = `<span class="order-links">Order: ${farm.map((f) =>
-    `<a href="${escapeHtml(f.url)}" ${EMBEDDED ? "" : `target="_blank" rel="noopener"`}>${escapeHtml(f.name)}</a>`).join("")}</span>`;
+function cartControls(r) {
+  const lines = farmOrderLines(r);
+  const inStock = lines.filter((l) => l.inStock);
+  const totalPacks = inStock.reduce((n, l) => n + (l.packs || 1), 0);
+  const priced = inStock.filter((l) => l.price != null);
+  const estTotal = priced.reduce((n, l) => n + l.price, 0);
+
+  const summary = lines.some((l) => l.packs != null) ? `
+    <p class="order-line">Your farm order for ${servingsOf(r)}:
+      ${lines.map((l) => {
+        const qty = l.packs == null ? ""
+          : l.packNote === "dozen"
+            ? `<strong>${l.packs} dozen</strong> `
+            : l.fixed
+              ? `<strong>${l.packs} &times;</strong> `
+              : `<strong>${l.packs} pack${l.packs === 1 ? "" : "s"}</strong> `;
+        const note = l.packNote && l.packNote !== "dozen" && l.packs != null ? ` (${l.packNote})` : "";
+        const out = l.known && !l.inStock ? ` <em>— sold out</em>` : "";
+        return `${qty}${escapeHtml(l.name)}${note}${out}`;
+      }).join(" · ")}${priced.length && priced.length === inStock.length && estTotal ? ` — about $${Math.round(estTotal)} from the farm` : ""}</p>` : "";
+
+  const links = `<span class="order-links">Order: ${lines.map((l) =>
+    `<a href="${escapeHtml(l.url)}" ${EMBEDDED ? "" : `target="_blank" rel="noopener"`}>${escapeHtml(l.name)}</a>`).join("")}</span>`;
+
   // embed.js only runs on the GrazeCart site, so embedded means same-origin
   // with the store — on the custom domain or the grazecart.com mirror.
   if (EMBEDDED && inStock.length) {
-    return `<button type="button" class="cart-btn" data-cart="${r.id}">
-      Add farm item${inStock.length === 1 ? "" : "s"} to my cart</button>
+    return `${summary}<button type="button" class="cart-btn" data-cart="${r.id}">
+      Add ${totalPacks === 1 ? "it" : `all ${totalPacks} packages`} to my cart</button>
       ${links}<p class="cart-status" hidden></p>`;
   }
-  return links;
+  return `${summary}${links}`;
 }
 
 function bindCards() {
@@ -357,6 +474,17 @@ function bindCards() {
   });
   document.querySelectorAll("[data-print]").forEach((btn) => {
     btn.addEventListener("click", () => printRecipe(btn.dataset.print));
+  });
+  document.querySelectorAll("[data-serve]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".recipe-card");
+      const r = recipes.find((x) => x.id === card.dataset.id);
+      const next = Math.min(16, Math.max(2, servingsOf(r) + Number(btn.dataset.serve)));
+      state.servingsFor[r.id] = next;
+      const y = window.scrollY;
+      renderList();
+      window.scrollTo(0, y); // re-render must not move the page under the +/- buttons
+    });
   });
   document.querySelectorAll("[data-share]").forEach((btn) => {
     btn.addEventListener("click", () => shareRecipe(btn.dataset.share, btn));
@@ -376,6 +504,8 @@ function printRecipe(id) {
   const r = recipes.find((x) => x.id === id);
   if (!r) return;
 
+  const servings = servingsOf(r);
+  const factor = servings / r.servings;
   const groups = [
     { key: "pvf", label: "From Park View Farm" },
     { key: "market", label: "From the farmers market" },
@@ -384,8 +514,14 @@ function printRecipe(id) {
     const items = r.ingredients.filter((i) => i.source === key);
     if (!items.length) return "";
     return `<h2>${label}</h2><ul>${items.map((i) =>
-      `<li class="print-ing">${escapeHtml([i.amount, i.item].filter(Boolean).join(" "))}</li>`).join("")}</ul>`;
+      `<li class="print-ing">${escapeHtml([scaleAmount(i.amount, factor), i.item].filter(Boolean).join(" "))}</li>`).join("")}</ul>`;
   }).join("");
+
+  const orderLines = farmOrderLines(r).filter((l) => l.packs != null);
+  const shopLine = orderLines.length
+    ? `<p class="print-meta">Farm order for ${servings}: ${orderLines.map((l) =>
+        `${l.packs} ${l.packNote === "dozen" ? "dozen" : l.fixed ? "x" : `pack${l.packs === 1 ? "" : "s"}`} ${escapeHtml(l.name)}`).join(" · ")}</p>`
+    : "";
 
   document.getElementById("pvf-print-sheet")?.remove();
   const sheet = document.createElement("div");
@@ -394,7 +530,8 @@ function printRecipe(id) {
     <div class="print-farm">Park View Farm &middot; Leicester, NY</div>
     <h1>${escapeHtml(r.name)}</h1>
     <p class="print-tagline">${escapeHtml(r.tagline)}</p>
-    <p class="print-meta">Serves ${r.servings} &middot; ${escapeHtml(r.totalTime)} &middot; ${escapeHtml(r.difficulty)} &middot; ${escapeHtml(cuisineLabel(r.cuisine))}</p>
+    <p class="print-meta">Serves ${servings}${factor !== 1 ? ` (scaled from ${r.servings})` : ""} &middot; ${escapeHtml(r.totalTime)} &middot; ${escapeHtml(r.difficulty)} &middot; ${escapeHtml(cuisineLabel(r.cuisine))}</p>
+    ${shopLine}
     ${groups}
     <h2>How it goes</h2>
     <ol>${r.instructions.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>
@@ -461,16 +598,16 @@ async function fetchAddSnapshot(slug) {
   return el.getAttribute("wire:snapshot");
 }
 
-async function addSlugToCart(slug, token) {
+async function addSlugToCart(slug, token, qty = 1) {
   const snapshot = await fetchAddSnapshot(slug);
   const productId = JSON.parse(snapshot).data.product[1].key;
+  // One POST carries the full quantity as stacked addToCart calls —
+  // verified mechanism (Order Planner, 2026-07-06).
+  const calls = Array.from({ length: qty }, () => ({ path: "", method: "addToCart", params: [productId] }));
   const resp = await fetch("/livewire/update", {
     method: "POST",
     headers: { "Content-type": "application/json", "X-Livewire": "" },
-    body: JSON.stringify({
-      _token: token,
-      components: [{ snapshot, updates: {}, calls: [{ path: "", method: "addToCart", params: [productId] }] }],
-    }),
+    body: JSON.stringify({ _token: token, components: [{ snapshot, updates: {}, calls }] }),
   });
   if (!resp.ok) throw new Error(`livewire ${resp.status}`);
   const data = await resp.json();
@@ -490,21 +627,21 @@ async function addRecipeToCart(btn) {
   }
 
   btn.disabled = true;
-  const farm = farmProductInfo(recipe).filter((f) => f.inStock);
+  const lines = farmOrderLines(recipe).filter((l) => l.inStock);
   const failed = [];
   let done = 0;
-  for (const f of farm) {
-    btn.textContent = `Adding: ${++done} of ${farm.length}`;
+  for (const l of lines) {
+    btn.textContent = `Adding: ${++done} of ${lines.length}`;
     try {
-      await addSlugToCart(f.slug, token);
+      await addSlugToCart(l.slug, token, l.packs || 1);
     } catch (e) {
-      failed.push(f.name);
+      failed.push(l.name);
     }
   }
 
-  if (failed.length === farm.length) {
+  if (failed.length === lines.length) {
     btn.disabled = false;
-    btn.textContent = "Add farm items to my cart";
+    btn.textContent = "Add to my cart";
     status.hidden = false;
     status.textContent = "That didn't work — use the item links instead, or refresh and try again.";
   } else if (failed.length) {
@@ -518,7 +655,7 @@ async function addRecipeToCart(btn) {
     btn.disabled = false;
     btn.textContent = "In your cart — open it";
     status.hidden = false;
-    status.textContent = "Added one of each. Adjust quantities in your cart.";
+    status.textContent = `Added ${lines.reduce((n, l) => n + (l.packs || 1), 0)} package${lines.length === 1 && (lines[0].packs || 1) === 1 ? "" : "s"} for ${servingsOf(recipe)} servings. Adjust anything in your cart.`;
   }
 }
 

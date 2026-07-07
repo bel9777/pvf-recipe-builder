@@ -221,6 +221,46 @@ main#recipes { max-width: 680px; margin: 0 auto; padding: 16px 16px 48px; }
 
 .recipe-body { border-top: 1px dashed var(--kraft-light); padding: 16px 20px 20px; }
 
+.serves-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  background: var(--paper);
+  border: 1px solid var(--kraft-light);
+  border-radius: 8px;
+}
+.serves-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--asphalt);
+}
+.serves-btn {
+  width: 30px; height: 30px;
+  border: 1px solid var(--kraft);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--board);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.serves-btn:disabled { opacity: 0.35; cursor: default; }
+.serves-count { min-width: 22px; text-align: center; font-size: 1.05rem; }
+.serves-note { font-size: 0.82rem; color: var(--asphalt); }
+
+.order-line {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--asphalt);
+}
+.order-line strong { color: var(--board); }
+.order-line em { color: var(--soldout); font-style: normal; }
+
 .ing-group-label {
   display: flex;
   align-items: center;

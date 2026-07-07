@@ -74,6 +74,9 @@ Field constraints:
 - cuisine: one of ${CUISINES.join(" | ")}
 - months: array of integers 1-12 when the dish is at its seasonal best
 - ingredients[].source: "pvf" | "market" | "pantry"; every pvf ingredient needs a valid slug
+- every pvf ingredient ALSO needs its quantity at the recipe's base servings, exactly one of:
+  "lb": <pounds needed> (by-weight cuts), "count": <number of eggs>, or "packs": 1 with "fixed": true
+  (whole birds, whole roasts, stock bags — things you buy whole, not by the pound)
 - farmProducts: the pvf slugs used
 - id: unique kebab-case, not already in the library
 
@@ -106,8 +109,11 @@ Return ONLY a raw JSON array of ${count} recipe objects. No markdown, no code fe
     if (!CUISINES.includes(r.cuisine)) errors.push(`${r.id}: bad cuisine ${r.cuisine}`);
     for (const s of r.farmProducts || [])
       if (!validSlugs.has(s)) errors.push(`${r.id}: unknown product slug ${s}`);
-    for (const i of r.ingredients || [])
+    for (const i of r.ingredients || []) {
       if (i.source === "pvf" && !validSlugs.has(i.slug)) errors.push(`${r.id}: pvf ingredient without valid slug (${i.item})`);
+      if (i.source === "pvf" && !(i.lb > 0 || i.count > 0 || i.packs > 0))
+        errors.push(`${r.id}: pvf ingredient missing lb/count/packs quantity (${i.item})`);
+    }
     for (const m of r.months || [])
       if (m < 1 || m > 12) errors.push(`${r.id}: bad month ${m}`);
   }
