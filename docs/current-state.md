@@ -62,6 +62,18 @@ with no count is a dead end we promised not to have.
   does NOT change its slug. /recipes is owned by GrazeCart's built-in
   recipes feature and can't be claimed by a custom page.
 
+## Weekly email recipe card (built 2026-07-06, STARTS with the 2026-07-14 send)
+
+`scripts/weekly-recipe-card.js` — no API key, no deps. Picks the most
+seasonal (narrow month window > "last call" bonus), in-stock,
+least-recently-featured recipe and prints a Drip-ready card skeleton +
+deep link. `--list` / `--pick <id>` / `--log <id>` (repeat-avoidance
+lives in scripts/featured-log.json — created on first --log). Wired into
+the pvf-weekly-email scheduled task as Phase 2 Step 2b, explicitly gated:
+SKIP the 2026-07-07 send (that week: Rochester deadline, Buffalo rollout,
+order planner, where-we-deliver). Social posting of the cooked recipe is
+Brian's separate manual thing — deliberately NOT part of this process.
+
 ## Leftovers / open items
 
 - **Stray page id 9** ("Farm Recipes", slug /recipes, shadowed by the
