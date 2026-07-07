@@ -1,68 +1,64 @@
 # Current state — PVF Recipes
 
-Updated: 2026-07-06 (v2 rebuild session, Claude Fable)
+Updated: 2026-07-06 (v2 rebuild + same-day ship, Claude Fable)
 
-## Status: BUILT + TESTED LOCALLY — not yet deployed
+## Status: SHIPPED — LIVE at parkviewfamilyfarm.com/farm-recipes
 
-Complete rebuild. v1 (Node/Express + per-request Claude generation, never
-deployed) replaced with a static app on the Order Planner's proven rails:
-GitHub Pages + GrazeCart-page embed + same-origin one-click add-to-cart.
+Complete rebuild of v1 (Node/Express per-request generator, never deployed)
+as a static app on the Order Planner's rails, deployed the same day.
 
-## What was built this session
+- **Live page**: https://parkviewfamilyfarm.com/farm-recipes — GrazeCart
+  page id 10, HTML widget with the two-line embed. Also serves at the
+  grazecart.com mirror domain.
+- **Nav**: main menu item labeled "Recipes" (position 4, after Where We
+  Deliver) → /farm-recipes. The old built-in Recipes nav link was removed.
+- **Pages**: repo public, GitHub Pages serves docs/ at
+  https://bel9777.github.io/pvf-recipe-builder/
+- **Add-to-cart VERIFIED live** (2026-07-06, Brian's signed-in session on
+  the grazecart domain): expanded the August BLT, one click → bacon in
+  cart → verified at /cart → removed to leave the cart clean. Same
+  Livewire mechanism as the Order Planner.
 
-- **23-recipe seed library** (`docs/recipes.json`), hand-written in the
-  farm voice. Tagged by meal type (6), cuisine (5), season months, and
-  live store product slugs — all validated against the real catalog.
-  Every month of the year has recipes. Includes currently-sold-out lamb
-  recipes on purpose (they show the "sold out right now" badge and keep
-  lamb desire warm between batches).
-- **Three entry modes**: Browse (meal type × cuisine chips), Start from
-  your items (product picker grouped by category, with per-product recipe
-  counts and honest "nothing yet for X" gaps), What's in season (month →
-  WNY produce chips + notes + month-matched recipes).
-- **Live catalog integration**: fetches the Order Planner's daily-scraped
-  inventory.json at runtime — real product names, URLs, stock badges.
-  Graceful degradation if the fetch fails.
-- **One-click add-to-cart per recipe** (embedded on parkviewfamilyfarm.com
-  only): ports the Order Planner's verified Livewire mechanism, adds one
-  of each in-stock farm item, link fallback everywhere else. NOT yet
-  tested on the live site (needs the page embed first).
-- **Library growth pipeline**: `scripts/generate-recipes.js` — Claude
-  writes new recipes constrained by catalog slugs, seasonal calendar,
-  existing library (no dupes), and the brand voice; schema-validated
-  before writing. Needs ANTHROPIC_API_KEY in .env.
-- **embed.js**: same two-line GrazeCart paste pattern as the planner
-  (`<div id="pvf-recipes"></div>` + script tag).
+## What shipped
 
-## Verified locally (preview, 2026-07-06)
+- 23-recipe hand-written seed library (docs/recipes.json), tagged by meal
+  type / cuisine / months / live product slugs, brand voice throughout.
+- Three entry modes: Browse (meal × cuisine), Start from your items
+  (live-catalog picker with per-product recipe counts), What's in season
+  (WNY produce calendar by month).
+- Live inventory from the Order Planner's daily scrape (stock badges,
+  names, URLs; graceful degradation).
+- Per-recipe one-click add-to-cart when embedded (adds one of each
+  in-stock farm item); order-link fallback on github.io / signed out.
+- scripts/generate-recipes.js — Claude pipeline to grow the library
+  (validates slugs + schema; human voice review required before commit).
 
-Browse filters (single + combined + empty state), items mode (selection,
-ranking, zero-match message), season mode (month switch, produce strip,
-recipe filtering), card expand (source-grouped ingredients, steps, tips),
-in-season-first sort, sold-out badges from live inventory, cart button
-correctly hidden off-site, mobile 375px layout. Add-to-cart NOT yet
-exercised against the live store.
+## Deploy details (for future reference)
 
-## Deploy plan (pending Brian's go)
+- GrazeCart page-builder REST API (discovered this session, bypasses the
+  fragile drag-drop UI + Ace editor): GET/POST
+  `/admin/pages/<id>/widgets` with `X-XSRF-TOKEN` from the XSRF cookie.
+  Widget payload: {page_id, title:"HTML", template:"HTML", content,
+  settings:{layout_width:"full-width"}, enabled:1, visible:1, sort:0}.
+- Menu items are edited via a modal (.gc-modal-container) with title +
+  path inputs — the nav item is label "Recipes", path "/farm-recipes".
+- Page slugs are FIXED at creation from the page name; renaming a page
+  does NOT change its slug. /recipes is owned by GrazeCart's built-in
+  recipes feature and can't be claimed by a custom page.
 
-1. Flip repo public (GitHub Pages needs it on this plan) — check history
-   for secrets first (clean: only .env.example ever committed).
-2. Enable Pages: master branch, /docs folder.
-3. GrazeCart: new custom page (e.g. /recipes-new or replace /recipes) with
-   the two-line embed; verify add-to-cart signed in, then swap nav link
-   from the old 2-recipe GrazeCart recipes page.
-4. Verify live: stock badges, cart fill, mobile.
-5. Optional launch: July delivery email + link from Order Planner.
+## Leftovers / open items
 
-## Open items
-
-- Old GrazeCart /recipes page (2 recipes) to be retired/redirected at swap.
-- Serving sizes/times are Claude's informed estimates; Brian should spot-
-  check a couple of recipes he's actually cooked.
-- Live "generate me a custom recipe" endpoint (v1's feature) deliberately
-  deferred: needs always-on hosting + API key + abuse control. The library
-  + pipeline covers the need for now; revisit if customers ask.
-- Consider a monthly GitHub Action: generate 3-4 recipes for next month's
-  produce, open a PR for Brian's voice review.
-- No recipe images yet — cards are text-first by design; product photos
-  exist in inventory.json if we ever want thumbnails on the farm-item line.
+- **Stray page id 9** ("Farm Recipes", slug /recipes, shadowed by the
+  built-in route so customers never see it): delete via Admin → My Site →
+  Pages trash icon. API DELETE returned 500; UI delete needs a human
+  click (native confirm dialog fights automation).
+- Old built-in /recipes page (2 recipes) still exists, now unlinked from
+  nav. Fine to leave; delete the 2 built-in recipes whenever.
+- Brian to spot-check a few recipes he's cooked (times/servings are
+  Claude estimates) and skim pvfNote lines for voice.
+- Launch pushes: July delivery email section, link from Order Planner
+  page, QR at Brighton booth.
+- Consider a monthly Action: generate 3-4 next-month recipes → PR for
+  Brian's voice review.
+- github.io assets cache ~10 min after a push (Pages max-age=600); the
+  embedded page self-heals.
