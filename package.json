@@ -4,7 +4,8 @@
   "description": "Park View Farm Recipes — static recipe library matched to WNY seasons, with a Claude pipeline for growing it",
   "scripts": {
     "serve": "py -m http.server 8644 --directory docs",
-    "generate": "node scripts/generate-recipes.js"
+    "generate": "node scripts/generate-recipes.js",
+    "card": "node scripts/weekly-recipe-card.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
