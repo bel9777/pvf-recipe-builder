@@ -81,9 +81,11 @@ buy a second). Pack contents CONFIRMED by Brian 2026-07-07: ham steak 1/pack; It
 sausage (mild+hot) + chorizo 3 links/pack; breakfast sausage 10/pack;
 leg quarters 2/pack; thighs 4/pack; boneless breasts 2/pack; bone-in
 breast 1 whole (one bird)/pack; drumsticks 6/pack; hot dogs 8/pack
-(July 4 sale record). STILL ASSUMED, awaiting Brian: chops per pack
-(fresh + smoked), ham hocks per pack (fresh + smoked), lamb shanks /
-loin chops / rib chops per pack, turkey legs per pack.
+(July 4 sale record); chops 2/pack (fresh + smoked); hocks usually
+1/pack; lamb shanks 2/pack; turkey legs 2/pack — ALL pack contents now
+Brian-confirmed (2026-07-07). Lamb loin/rib chops still assumed 4/pack,
+but Brian doesn't expect to sell lamb chops anytime soon — recipes stay
+(sold-out badges cover them); recheck if lamb chops return.
 generate-recipes.js now requires the quantity fields on new recipes.
 
 ## Weekly email recipe card (built 2026-07-06, STARTS with the 2026-07-14 send)
