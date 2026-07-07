@@ -311,7 +311,9 @@ function cartControls(r, farm) {
   const inStock = farm.filter((f) => f.inStock);
   const links = `<span class="order-links">Order: ${farm.map((f) =>
     `<a href="${escapeHtml(f.url)}" ${EMBEDDED ? "" : `target="_blank" rel="noopener"`}>${escapeHtml(f.name)}</a>`).join("")}</span>`;
-  if (EMBEDDED && location.hostname.endsWith("parkviewfamilyfarm.com") && inStock.length) {
+  // embed.js only runs on the GrazeCart site, so embedded means same-origin
+  // with the store — on the custom domain or the grazecart.com mirror.
+  if (EMBEDDED && inStock.length) {
     return `<button type="button" class="cart-btn" data-cart="${r.id}">
       Add farm item${inStock.length === 1 ? "" : "s"} to my cart</button>
       ${links}<p class="cart-status" hidden></p>`;
