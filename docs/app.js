@@ -290,6 +290,9 @@ function parseLeadingQty(str) {
 
 function scaleAmount(amount, factor) {
   if (!amount || factor === 1) return amount;
+  // Trailing parentheticals describe the BASE amount ("(one pack)",
+  // "(about 2.4 lbs)") — stale once scaled, so drop them.
+  amount = amount.replace(/\s*\([^)]*\)\s*$/, "");
   const lead = parseLeadingQty(amount);
   if (!lead) return amount;
   let rest = amount.slice(lead.len);

@@ -77,9 +77,13 @@ mechanism). Print sheet uses the scaled amounts + farm-order line.
 
 STRETCH constants in app.js: another package is added only past a 15%
 overshoot (35% for fixed whole items — a bird carves thinner before you
-buy a second). NOT Brian-verified: per-pack contents assumptions baked
-into the recipe `lb` values (e.g. ham steaks per 2 lb pack, chops per
-pack, Canadian bacon slices per lb) — gut-check against real packages.
+buy a second). Pack contents CONFIRMED by Brian 2026-07-07: ham steak 1/pack; Italian
+sausage (mild+hot) + chorizo 3 links/pack; breakfast sausage 10/pack;
+leg quarters 2/pack; thighs 4/pack; boneless breasts 2/pack; bone-in
+breast 1 whole (one bird)/pack; drumsticks 6/pack; hot dogs 8/pack
+(July 4 sale record). STILL ASSUMED, awaiting Brian: chops per pack
+(fresh + smoked), ham hocks per pack (fresh + smoked), lamb shanks /
+loin chops / rib chops per pack, turkey legs per pack.
 generate-recipes.js now requires the quantity fields on new recipes.
 
 ## Weekly email recipe card (built 2026-07-06, STARTS with the 2026-07-14 send)

@@ -114,11 +114,11 @@
       ],
       "ingredients": [
         {
-          "amount": "2 lbs",
+          "amount": "4 thighs (about 1.5 lbs)",
           "item": "chicken thighs, bone-in, skin-on",
           "source": "pvf",
           "slug": "chicken-thighs",
-          "lb": 2
+          "lb": 1.5
         },
         {
           "amount": "3 ears",
@@ -364,7 +364,7 @@
           "fixed": true
         },
         {
-          "amount": "1.5 lbs",
+          "amount": "6 drumsticks (about 1.5 lbs)",
           "item": "chicken drumsticks",
           "source": "pvf",
           "slug": "chicken-drumsticks",
@@ -445,7 +445,7 @@
       ],
       "ingredients": [
         {
-          "amount": "1.5 lbs",
+          "amount": "2 breasts (about 1.5 lbs)",
           "item": "boneless chicken breast",
           "source": "pvf",
           "slug": "chicken-breast-boneless",
@@ -956,11 +956,11 @@
       ],
       "ingredients": [
         {
-          "amount": "1.5 lbs",
+          "amount": "6 links (about 2.4 lbs)",
           "item": "mild Italian sausage links (or hot — dealer's choice)",
           "source": "pvf",
           "slug": "pork-italian-sausage-links",
-          "lb": 1.5
+          "lb": 2.4
         },
         {
           "amount": "4",
@@ -1038,11 +1038,11 @@
       ],
       "ingredients": [
         {
-          "amount": "1 lb",
+          "amount": "3 links (about 1.2 lbs)",
           "item": "hot Italian sausage links, casings removed",
           "source": "pvf",
           "slug": "pork-italian-sausage-links-hot",
-          "lb": 1
+          "lb": 1.2
         },
         {
           "amount": "1 bunch",
@@ -1127,11 +1127,11 @@
       ],
       "ingredients": [
         {
-          "amount": "1 lb",
+          "amount": "3 links (about 1.2 lbs)",
           "item": "chorizo sausage links, casings removed",
           "source": "pvf",
           "slug": "chorizo-sausage-links",
-          "lb": 1
+          "lb": 1.2
         },
         {
           "amount": "8",
@@ -1217,11 +1217,11 @@
       ],
       "ingredients": [
         {
-          "amount": "1 lb",
+          "amount": "10 links (one pack)",
           "item": "pork breakfast sausage links",
           "source": "pvf",
           "slug": "pork-breakfast-sausage-links",
-          "lb": 1
+          "lb": 0.8
         },
         {
           "amount": "8",
@@ -1966,8 +1966,8 @@
       ],
       "ingredients": [
         {
-          "amount": "2 (1.5 lbs)",
-          "item": "bone-in, skin-on chicken breasts",
+          "amount": "1 whole (about 2 lbs)",
+          "item": "bone-in chicken breast (one bird, both halves)",
           "source": "pvf",
           "slug": "chicken-breast-bone-in",
           "lb": 2
@@ -2009,12 +2009,12 @@
         }
       ],
       "instructions": [
-        "Heat the oven to 425°F. Salt the breasts well, ideally an hour ahead. Mash the butter with the garlic, thyme, and a pinch of salt.",
-        "Work half the garlic butter under the skin of each breast and rub a little over the top.",
-        "Toss the potatoes with oil and salt in an oven-safe skillet, set the breasts on top skin-side up, and roast 35 to 40 minutes, until the thickest part reads 155°F.",
+        "Heat the oven to 425°F. Salt the breast well, ideally an hour ahead. Mash the butter with the garlic, thyme, and a pinch of salt.",
+        "Work half the garlic butter under the skin of each half and rub a little over the top.",
+        "Toss the potatoes with oil and salt in an oven-safe skillet, set the breast on top skin-side up, and roast 35 to 40 minutes, until the thickest part reads 155°F.",
         "Rest the chicken on a board. Set the skillet over medium heat, add the greens, and wilt them in the pan drippings.",
         "Push the greens aside, add the stock, and scrape up the browned bits. Kill the heat and swirl in the remaining garlic butter and a squeeze of lemon.",
-        "Slice the breasts off the bone, slice crosswise, and serve over the potatoes and greens with the pan sauce."
+        "Slice the halves off the bone, slice crosswise, and serve over the potatoes and greens with the pan sauce."
       ],
       "marketTip": "Winter markets in Rochester carry storage potatoes and greenhouse or frost-hardy greens right through the cold months — kale that's been through a frost is sweeter than anything from September.",
       "pvfNote": "A bone-in breast from a pasture-raised, corn-and-soy-free bird is a different cut than the water-plumped boneless kind — the bone and skin protect it, so you get white meat that actually tastes like the dark.",
@@ -2195,7 +2195,7 @@
     {
       "id": "maple-glazed-ham-steak",
       "name": "Maple-Glazed Ham Steak with Fried Eggs",
-      "tagline": "A smoked ham steak seared in maple and butter, with eggs fried in the glaze. Breakfast for dinner is legal.",
+      "tagline": "One big smoked ham steak seared in maple and butter, with eggs fried in the glaze. Breakfast for dinner is legal.",
       "mealType": "breakfast",
       "cuisine": "farmhouse",
       "months": [
@@ -2224,8 +2224,8 @@
       ],
       "ingredients": [
         {
-          "amount": "2",
-          "item": "smoked ham steaks",
+          "amount": "1 (about 2 lbs)",
+          "item": "smoked ham steak",
           "source": "pvf",
           "slug": "pork-ham-steak",
           "lb": 2
@@ -2264,10 +2264,10 @@
         }
       ],
       "instructions": [
-        "Pat the ham steaks dry. Sear in butter in a big skillet over medium-high, 3 minutes a side, until browned at the edges. They're fully cooked — you're building color and warming them through.",
-        "Drop the heat to low. Add the maple, mustard, and a splash of vinegar, and turn the steaks to glaze both sides, about 2 minutes.",
+        "Pat the ham steak dry. Sear in butter in a big skillet over medium-high, 3 minutes a side, until browned at the edges. It's fully cooked — you're building color and warming it through.",
+        "Drop the heat to low. Add the maple, mustard, and a splash of vinegar, and turn the steak to glaze both sides, about 2 minutes.",
         "Move the ham to plates and tent with foil. Crack the eggs straight into the sticky pan and fry them in what's left of the glaze.",
-        "Serve a half steak and two eggs per person with plenty of black pepper and toast for the yolk."
+        "Cut the steak in quarters and serve a quarter with two eggs per person with plenty of black pepper and toast for the yolk."
       ],
       "marketTip": "WNY maple producers are at the Rochester markets year-round, and this is where the dark, late-season syrup shines — more maple flavor, stands up to smoke and salt.",
       "pvfNote": "Ham steaks come from the hind leg of our Idaho Pasture Pigs, brined and smoked at Timberline Meats. Pasture-raised and corn-and-soy-free means it's ham that tastes like pork, not just salt — one steak feeds two people easy.",
