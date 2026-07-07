@@ -2567,11 +2567,11 @@
       ],
       "ingredients": [
         {
-          "amount": "2 lbs",
+          "amount": "8 dogs (one pack)",
           "item": "uncured pork hot dogs",
           "source": "pvf",
           "slug": "uncured-pork-hot-dogs",
-          "lb": 2
+          "lb": 1.28
         },
         {
           "amount": "1",
