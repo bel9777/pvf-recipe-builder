@@ -78,6 +78,11 @@ async function init() {
     empty.innerHTML = `The recipes couldn't load. <a href="${PAGES_BASE}">Try opening the page here</a>.`;
     return;
   }
+  // Deep link: ?recipe=<id> opens straight to that recipe (shared links).
+  const wanted = new URLSearchParams(location.search).get("recipe");
+  if (wanted && recipes.some((r) => r.id === wanted)) {
+    state.openId = wanted;
+  }
   renderList();
 
   // Live catalog — nice to have; everything still works if it fails.
@@ -91,6 +96,17 @@ async function init() {
   }
   renderProductGroups();
   renderList(); // pick up stock badges
+
+  // Deep-link scroll happens after the FINAL render — an earlier smooth
+  // scroll would be cancelled when this re-render replaces the card.
+  // Instant jump, not smooth: smooth scrolling is animation-driven and
+  // never completes in a background tab (how shared links often open).
+  if (wanted && state.openId === wanted) {
+    setTimeout(() => {
+      document.querySelector(`.recipe-card[data-id="${wanted}"]`)
+        ?.scrollIntoView({ block: "start" });
+    }, 150);
+  }
 }
 
 /* ── modes ────────────────────────────────────────── */
@@ -303,6 +319,11 @@ function renderCard(r) {
     </div>
     <div class="cart-row">
       ${cartControls(r, farm)}
+      <span class="action-links">
+        <button type="button" class="action-btn" data-print="${r.id}">Print</button>
+        <button type="button" class="action-btn" data-share="${r.id}">Share</button>
+      </span>
+      <p class="action-status" hidden></p>
     </div>` : ""}
   </article>`;
 }
@@ -334,6 +355,83 @@ function bindCards() {
   document.querySelectorAll("[data-cart]").forEach((btn) => {
     btn.addEventListener("click", () => addRecipeToCart(btn));
   });
+  document.querySelectorAll("[data-print]").forEach((btn) => {
+    btn.addEventListener("click", () => printRecipe(btn.dataset.print));
+  });
+  document.querySelectorAll("[data-share]").forEach((btn) => {
+    btn.addEventListener("click", () => shareRecipe(btn.dataset.share, btn));
+  });
+}
+
+/* ── print / share ────────────────────────────────── */
+
+function recipeUrl(r) {
+  const base = EMBEDDED
+    ? "https://parkviewfamilyfarm.com/farm-recipes"
+    : location.origin + location.pathname;
+  return `${base}?recipe=${encodeURIComponent(r.id)}`;
+}
+
+function printRecipe(id) {
+  const r = recipes.find((x) => x.id === id);
+  if (!r) return;
+
+  const groups = [
+    { key: "pvf", label: "From Park View Farm" },
+    { key: "market", label: "From the farmers market" },
+    { key: "pantry", label: "Pantry staples" },
+  ].map(({ key, label }) => {
+    const items = r.ingredients.filter((i) => i.source === key);
+    if (!items.length) return "";
+    return `<h2>${label}</h2><ul>${items.map((i) =>
+      `<li class="print-ing">${escapeHtml([i.amount, i.item].filter(Boolean).join(" "))}</li>`).join("")}</ul>`;
+  }).join("");
+
+  document.getElementById("pvf-print-sheet")?.remove();
+  const sheet = document.createElement("div");
+  sheet.id = "pvf-print-sheet";
+  sheet.innerHTML = `
+    <div class="print-farm">Park View Farm &middot; Leicester, NY</div>
+    <h1>${escapeHtml(r.name)}</h1>
+    <p class="print-tagline">${escapeHtml(r.tagline)}</p>
+    <p class="print-meta">Serves ${r.servings} &middot; ${escapeHtml(r.totalTime)} &middot; ${escapeHtml(r.difficulty)} &middot; ${escapeHtml(cuisineLabel(r.cuisine))}</p>
+    ${groups}
+    <h2>How it goes</h2>
+    <ol>${r.instructions.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>
+    <div class="print-note"><strong>Farmers market tip:</strong> ${escapeHtml(r.marketTip)}</div>
+    <div class="print-note"><strong>From the farm:</strong> ${escapeHtml(r.pvfNote)}</div>
+    <div class="print-footer">Pasture-raised, corn-and-soy-free &middot; order the farm ingredients at parkviewfamilyfarm.com &middot; more recipes: parkviewfamilyfarm.com/farm-recipes</div>`;
+  document.body.appendChild(sheet);
+  document.body.classList.add("pvf-printing");
+
+  window.addEventListener("afterprint", () => {
+    sheet.remove();
+    document.body.classList.remove("pvf-printing");
+  }, { once: true });
+  window.print();
+}
+
+async function shareRecipe(id, btn) {
+  const r = recipes.find((x) => x.id === id);
+  if (!r) return;
+  const url = recipeUrl(r);
+  const status = btn.closest(".cart-row").querySelector(".action-status");
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: `${r.name} — Park View Farm`, text: r.tagline, url });
+      return;
+    } catch (e) {
+      if (e.name === "AbortError") return; // user closed the share tray
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    status.textContent = "Link copied — paste it into a text or email.";
+  } catch (e) {
+    status.innerHTML = `Copy this link: <a href="${escapeHtml(url)}">${escapeHtml(url)}</a>`;
+  }
+  status.hidden = false;
 }
 
 /* ── one-click cart fill ──────────────────────────── *

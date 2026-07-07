@@ -295,7 +295,79 @@ main#recipes { max-width: 680px; margin: 0 auto; padding: 16px 16px 48px; }
 .order-links { font-size: 0.9rem; color: var(--asphalt); }
 .order-links a { color: var(--orange); margin-right: 10px; }
 
+.action-links { margin-left: auto; display: flex; gap: 16px; }
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--asphalt);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.action-btn:hover { color: var(--orange); }
+.action-status { flex-basis: 100%; font-size: 0.88rem; color: var(--asphalt); margin: 0; }
+.action-status a { color: var(--orange); word-break: break-all; }
+
 @media (max-width: 480px) {
   .mode-tab { font-size: 0.82rem; padding: 9px 4px; }
   .ing-amount { min-width: 62px; }
+}
+
+/* ── Print a single recipe ─────────────────────────── *
+ * The print sheet is appended directly to <body>, so hiding body's other
+ * children hides everything — including the GrazeCart site chrome when
+ * embedded. Print → "Save as PDF" covers download/save too. */
+
+#pvf-print-sheet { display: none; }
+
+@media print {
+  body.pvf-printing > :not(#pvf-print-sheet) { display: none !important; }
+  body.pvf-printing { background: #fff !important; }
+  #pvf-print-sheet {
+    display: block !important;
+    font: 12pt/1.55 Georgia, 'Times New Roman', serif;
+    color: #000;
+    max-width: 6.5in;
+    margin: 0 auto;
+  }
+  #pvf-print-sheet .print-farm {
+    font: 700 9pt/1.4 Arial, sans-serif;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  #pvf-print-sheet h1 { font-size: 20pt; font-weight: 400; margin: 4pt 0 2pt; }
+  #pvf-print-sheet .print-tagline { font-style: italic; margin: 0 0 8pt; }
+  #pvf-print-sheet .print-meta {
+    font: 10pt Arial, sans-serif;
+    border-top: 1pt solid #000;
+    border-bottom: 1pt solid #000;
+    padding: 4pt 0;
+    margin: 0 0 8pt;
+  }
+  #pvf-print-sheet h2 {
+    font: 700 10pt Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 12pt 0 4pt;
+  }
+  #pvf-print-sheet ul { list-style: none; margin: 0; padding: 0; }
+  #pvf-print-sheet li.print-ing { padding: 1pt 0; }
+  #pvf-print-sheet li.print-ing::before { content: "\2610\00a0\00a0"; }
+  #pvf-print-sheet ol { margin: 0; padding-left: 18pt; }
+  #pvf-print-sheet ol li { margin: 4pt 0; }
+  #pvf-print-sheet .print-note {
+    border: 1pt solid #000;
+    padding: 6pt 9pt;
+    margin: 10pt 0 0;
+    font-size: 10.5pt;
+    break-inside: avoid;
+  }
+  #pvf-print-sheet .print-footer {
+    margin-top: 14pt;
+    border-top: 1pt solid #000;
+    padding-top: 6pt;
+    font: 9pt Arial, sans-serif;
+  }
 }

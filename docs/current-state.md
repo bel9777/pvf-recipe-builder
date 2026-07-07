@@ -39,6 +39,13 @@ with no count is a dead end we promised not to have.
   names, URLs; graceful degradation).
 - Per-recipe one-click add-to-cart when embedded (adds one of each
   in-stock farm item); order-link fallback on github.io / signed out.
+- Per-recipe Print + Share (added 2026-07-06, Brian request): Print builds
+  a clean print sheet (checkbox ingredients, no site chrome — sheet is a
+  direct body child so the GrazeCart wrapper prints hidden; print dialog
+  covers Save-as-PDF). Share uses navigator.share (mobile tray = text/
+  email/anything) -> clipboard copy -> visible link, in that order. Deep
+  links: ?recipe=<id> opens + jumps to that recipe (instant scroll on
+  purpose — smooth never completes in background tabs).
 - scripts/generate-recipes.js — Claude pipeline to grow the library
   (validates slugs + schema; human voice review required before commit).
 
